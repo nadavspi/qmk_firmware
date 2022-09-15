@@ -22,10 +22,14 @@
 
 #define ALFRED LCTL(KC_SPACE)
 #define CLIPBOARD LALT(LGUI(KC_C))
-#define OBSIDIAN LGUI(LSFT(KC_SCOLON))
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
+};
+
+
+enum tap_dance_codes {
+  TD_OBSIDIAN
 };
 
 
@@ -33,13 +37,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* ┌───────┬─────┬─────┬─────┬─────┬─────┬───────┐ ┌───────┬─────┬─────┬─────┬─────┬─────┬───────┐
  * │ESCAPE │  1  │  2  │  3  │  4  │  5  │ ASUP  │ │   +   │  6  │  7  │  8  │  9  │  0  │  ` ~  │
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤
- * │  TAB  │  Q  │  W  │  E  │  R  │  T  │ ASDN  │ │ MINUS │  Y  │  U  │  I  │  O  │  P  │ MINUS │
+ * │  TAB  │  Q  │  W  │  E  │  R  │  T  │ ASDN  │ │   -   │  Y  │  U  │  I  │  O  │  P  │   -   │
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤
- * │BSPACE │MT(MO│MT(MO│MT(MO│MT(MO│  G  │ ASRP  │ │ EQUAL │  H  │MT(MO│MT(MO│MT(MO│MT(MO│ QUOTE │
+ * │BSPACE │A Ctr│S Opt│D Cmd│F Shf│  G  │ ASRP  │ │   =   │  H  │J Shf│K Cmd│L Opt│; Ctr│  ' "  │
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┘ └───────┼─────┼─────┼─────┼─────┼─────┼───────┤
- * │CAPSWRD│  Z  │  X  │  C  │  V  │  B  │                 │  N  │  M  │COMMA│ . < │SLASH│RSHIFT │
+ * │CAPSWRD│  Z  │  X  │  C  │  V  │  B  │                 │  N  │  M  │ , > │ . < │ / ? │RSHIFT │
  * ├───────┼─────┼─────┼─────┼─────┼─────┘                 └─────┼─────┼─────┼─────┼─────┼───────┤
- * │ MO(1) │     │     │LALT │SPACE│                             │ENTER│OBSID│     │MO(3)│BSLASH │
+ * │ MO(1) │     │     │LALT │SPACE│                             │ENTER│Obsid│     │MO(3)│BSLASH │
  * └───────┴─────┴─────┴─────┴─────┘                             └─────┴─────┴─────┴─────┴───────┘
  *                               ┌───────────────┐ ┌───────────────┐
  *                               │     TT(1)     │ │               │
@@ -52,20 +56,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_ASDN,                                 KC_MINUS,       KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_MINUS,       
     KC_BSPACE,      MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MT(MOD_LGUI, KC_D),MT(MOD_LSFT, KC_F),KC_G,           KC_ASRP,                                                                 KC_EQUAL,       KC_H,           MT(MOD_RSFT, KC_J),MT(MOD_RGUI, KC_K),MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCOLON),KC_QUOTE,       
     CAPSWRD,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSHIFT,      
-    MO(1),          _______, _______, KC_LALT,        KC_SPACE,       TT(1),                                                                                                          _______, KC_ENTER,       OBSIDIAN,    _______, MO(3),          KC_BSLASH,      
+    MO(1),          _______, _______, KC_LALT,        KC_SPACE,       TT(1),                                                                                                          _______, KC_ENTER,       TD(TD_OBSIDIAN),    _______, MO(3),          KC_BSLASH,      
     KC_LGUI,                                                                        MO(1),MO(2),                                                                                    MO(3),          ALFRED, MO(1)
   ),  
 
 /* ┌───────┬─────┬─────┬─────┬─────┬─────┬───────┐ ┌───────┬─────┬─────┬─────┬─────┬─────┬───────┐
- * │ESCAPE │ F1  │ F2  │ F3  │ F4  │ F5  │       │ │       │ F6  │ F7  │SLASH│  *  │MINUS│  F11  │
+ * │ESCAPE │ F1  │ F2  │ F3  │ F4  │ F5  │       │ │       │ F6  │ F7  │ / ? │  *  │  -  │  F11  │
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤
  * │       │  !  │  @  │  [  │  ]  │  |  │       │ │       │     │  7  │  8  │  9  │KP_PL│  F12  │
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤ ├───────┼─────┼─────┼─────┼─────┼─────┼───────┤
  * │       │  #  │  $  │  (  │  )  │ ` ~ │       │ │       │     │  4  │  5  │  6  │KP_PL│       │
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┘ └───────┼─────┼─────┼─────┼─────┼─────┼───────┤
- * │       │  %  │  ^  │  {  │  }  │     │                 │     │  1  │  2  │  3  │EQUAL│       │
+ * │       │  %  │  ^  │  {  │  }  │     │                 │     │  1  │  2  │  3  │  =  │       │
  * ├───────┼─────┼─────┼─────┼─────┼─────┘                 └─────┼─────┼─────┼─────┼─────┼───────┤
- * │       │COMMA│     │     │     │                             │  0  │ . < │ . < │EQUAL│       │
+ * │       │ , > │     │     │     │                             │  0  │ . < │ . < │  =  │       │
  * └───────┴─────┴─────┴─────┴─────┘                             └─────┴─────┴─────┴─────┴───────┘
  *                               ┌───────────────┐ ┌───────────────┐
  *                               │               │ │               │
@@ -135,6 +139,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
+/*
+* RGB
+*/
+
 extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
@@ -202,10 +210,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-typedef struct {
-    bool is_press_action;
-    uint8_t step;
-} tap;
+/*
+* Tap dance
+*/
+
 
 enum {
     SINGLE_TAP = 1,
@@ -217,13 +225,22 @@ enum {
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-      
+  // Activate Obsidian on tap, open daily note on double tap
+  [TD_OBSIDIAN] = ACTION_TAP_DANCE_DOUBLE(LGUI(LSFT(KC_SCOLON)), LCTL(LSFT(KC_G)))
 };
+
+/*
+* Auto Shift
+*/
 
 bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
     if (IS_MT(keycode)){return true;}
     return false;
 }
+
+/*
+* Caps Word
+*/
 
 void caps_word_set_user(bool active) {
   ML_LED_1(active);
