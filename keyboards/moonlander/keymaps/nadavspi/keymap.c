@@ -238,6 +238,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
-    if (IS_RETRO(keycode)){return true;}
+    if (IS_MT(keycode)){return true;}
     return false;
 }
