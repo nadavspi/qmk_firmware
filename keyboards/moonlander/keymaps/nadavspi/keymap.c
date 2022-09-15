@@ -315,3 +315,9 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
     if (IS_MT(keycode)){return true;}
     return false;
 }
+
+void caps_word_set_user(bool active) {
+  ML_LED_1(active);
+  ML_LED_4(active);
+}
+
