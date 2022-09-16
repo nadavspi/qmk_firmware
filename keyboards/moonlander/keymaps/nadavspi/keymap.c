@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ├───────┼─────┼─────┼─────┼─────┼─────┼───────┘ └───────┼─────┼─────┼─────┼─────┼─────┼───────┤
  * │CAPSWRD│  Z  │  X  │  C  │  V  │  B  │                 │  N  │  M  │ , > │ . < │ / ? │RSHIFT │
  * ├───────┼─────┼─────┼─────┼─────┼─────┘                 └─────┼─────┼─────┼─────┼─────┼───────┤
- * │ MO(1) │     │     │LALT │SPACE│                             │ENTER│Obsid│     │MO(3)│BSLASH │
+ * │       │     │     │     │SPACE│                             │ENTER│Obsid│     │MO(3)│BSLASH │
  * └───────┴─────┴─────┴─────┴─────┘                             └─────┴─────┴─────┴─────┴───────┘
  *                               ┌───────────────┐ ┌───────────────┐
  *                               │     TT(1)     │ │               │
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_ASDN,                                 KC_MINUS,       KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_MINUS,       
     KC_BSPACE,      MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MT(MOD_LGUI, KC_D),MT(MOD_LSFT, KC_F),KC_G,           KC_ASRP,                                                                 KC_EQUAL,       KC_H,           MT(MOD_RSFT, KC_J),MT(MOD_RGUI, KC_K),MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCOLON),KC_QUOTE,       
     CAPSWRD,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSHIFT,      
-    MO(1),          _______, _______, KC_LALT,        KC_SPACE,       TT(1),                                                                                                          _______, KC_ENTER,       TD(TD_OBSIDIAN),    _______, MO(3),          KC_BSLASH,      
+    _______,        _______, _______, _______,        KC_SPACE,       TT(1),                                                                                                          _______, KC_ENTER,       TD(TD_OBSIDIAN),    _______, MO(3),          KC_BSLASH,      
     KC_LGUI,                                                                        MO(1),MO(2),                                                                                    MO(3),          ALFRED, MO(1)
   ),  
 
