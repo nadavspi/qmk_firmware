@@ -32,13 +32,22 @@
 #define DEFAULT_R3 _________________QWERTY_R2_________________, KC_QUOTE
 #define DEFAULT_R4 _________________QWERTY_R3_________________, _______
 
-#define LOWER_L1 _______, _______, _______, _______, _______, _______ 
-#define LOWER_L2 _______, _______, _______,  KC_LBRACKET, KC_RBRACKET, KC_PIPE  
-#define LOWER_L3 _______, _______, _______,  KC_LPRN,     KC_RPRN,     KC_GRAVE    
-#define LOWER_L4 _______, _______, _______,  KC_LCBR,     KC_RCBR,     KC_BSLASH
+#define RAISE_L1 _______, _______, _______, _______, _______, _______ 
+#define RAISE_L2 _______, _______, _______, KC_LBRACKET, KC_RBRACKET, KC_PIPE  
+#define RAISE_L3 _______, _______, _______, KC_LPRN,     KC_RPRN,     KC_GRAVE    
+#define RAISE_L4 _______, _______, _______, KC_LCBR,     KC_RCBR,     KC_BSLASH
 
-#define LOWER_R1 _______, _______, _______, _______, _______, _______ 
-#define LOWER_R2 _______, _______, _______, _______, _______, _______ 
-#define LOWER_R3 _______, _______, _______, _______, _______, _______ 
-#define LOWER_R4 _______, _______, _______, _______, _______, _______ 
+#define RAISE_R1 _______, _______, _______, _______, _______, _______ 
+#define RAISE_R2 _______, _______, _______, _______, _______, _______ 
+#define RAISE_R3 _______, _______, _______, _______, _______, _______ 
+#define RAISE_R4 _______, _______, _______, _______, _______, _______ 
 
+#define LOWER_L1 _______,  _______,             _______,      _______,           _______,              _______
+#define LOWER_L2 _______,  _______,             _______,      _______,           LGUI(LSFT(KC_SPACE)), _______
+#define LOWER_L3 _______,  KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,     ZOOM_MUTE
+#define LOWER_L4 _______,  _______,             _______,      CLIPBOARD,         LGUI(KC_BSLASH),      _______
+
+#define LOWER_R1 _______   , _______   , _______ , _______    , _______, RESET
+#define LOWER_R2 KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______, _______
+#define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
+#define LOWER_R4 _______   , _______   , _______ , _______    , _______, _______

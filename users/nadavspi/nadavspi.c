@@ -1,3 +1,5 @@
+#include "rgb_matrix.h"
+
 #include "nadavspi.h"
 
 __attribute__ ((weak))
@@ -64,5 +66,44 @@ bool caps_word_press_user(uint16_t keycode) {
 
         default:
             return false;  // Deactivate Caps Word.
+    }
+}
+
+void keyboard_post_init_user(void) {
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+    rgb_matrix_sethsv_noeeprom(HSV_OFF);
+}
+
+void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+  if (layer_state_is(_DEFAULT)) {
+    RGB_MATRIX_INDICATOR_SET_COLOR(22, 31, 255, 255);
+    RGB_MATRIX_INDICATOR_SET_COLOR(58, 31, 255, 255);
+  }
+  
+   if (get_highest_layer(layer_state) > 0) {
+        uint8_t layer = get_highest_layer(layer_state);
+
+        for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
+            for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
+                uint8_t index = g_led_config.matrix_co[row][col];
+
+                if (index >= led_min && index <= led_max && index != NO_LED &&
+                keymap_key_to_keycode(layer, (keypos_t){col,row}) > KC_TRNS) {
+                  switch (get_highest_layer(layer_state)) {
+                    case _LOWER:
+                      rgb_matrix_set_color(index, RGB_ORANGE);
+                      break;
+                    case _RAISE:
+                      rgb_matrix_set_color(index, RGB_PURPLE);
+                      break;
+                    case _STENO:
+                      rgb_matrix_set_color(index, RGB_GREEN);
+                      break;
+                    default:
+                      break;
+                  }
+                }
+            }
+        }
     }
 }

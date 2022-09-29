@@ -12,9 +12,9 @@
 
 enum userspace_layers {
   _DEFAULT,
-  _LOWER,
   _RAISE,
-  _ADJUST,
+  _LOWER,
+  _STENO,
 };
 
 enum custom_keycodes {
