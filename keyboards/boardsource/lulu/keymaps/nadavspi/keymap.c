@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DEFAULT_L2,                    DEFAULT_R2,
     DEFAULT_L3,                    DEFAULT_R3,
     DEFAULT_L4, KC_LBRC,  KC_RBRC, DEFAULT_R4,
-                KC_LALT, LOWER, KC_SPC, KC_LGUI,         RAISE, KC_ENT, _______, KC_RGUI
+                KC_LALT, LOWER, KC_SPC, KC_LGUI,         ALFRED, KC_ENT, RAISE, TD(TD_OBSIDIAN)
   ),
 
   [_RAISE] = LAYOUT_wrapper(

@@ -47,7 +47,7 @@
 #define LOWER_L3 _______,  KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,     ZOOM_MUTE
 #define LOWER_L4 _______,  _______,             _______,      CLIPBOARD,         LGUI(KC_BSLASH),      _______
 
-#define LOWER_R1 _______   , _______   , _______ , _______    , _______, RESET
+#define LOWER_R1 _______   , _______   , _______ , _______    , KC_MAKE, RESET
 #define LOWER_R2 KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______, _______
 #define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
 #define LOWER_R4 _______   , _______   , _______ , _______    , _______, _______
