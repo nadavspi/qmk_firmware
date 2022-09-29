@@ -9,6 +9,7 @@
 #define ALFRED LCTL(KC_SPACE)
 #define CLIPBOARD LALT(LGUI(KC_C))
 #define ZOOM_MUTE LGUI(LSFT(KC_M))
+#define RESET QK_BOOT
 
 enum userspace_layers {
   _DEFAULT,
