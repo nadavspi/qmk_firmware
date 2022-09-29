@@ -1,0 +1,68 @@
+#include "nadavspi.h"
+
+__attribute__ ((weak))
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+  return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
+            if (!record->event.pressed) {
+            uint8_t temp_mod = get_mods();
+            uint8_t temp_osm = get_oneshot_mods();
+            clear_mods(); clear_oneshot_mods();
+            SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP);
+    #ifndef FLASH_BOOTLOADER
+            if ((temp_mod | temp_osm) & MOD_MASK_SHIFT)
+    #endif
+            {
+                SEND_STRING(":flash");
+            }
+            if ((temp_mod | temp_osm) & MOD_MASK_CTRL) {
+                SEND_STRING(" -j8 --output-sync");
+            }
+            tap_code(KC_ENT);
+            set_mods(temp_mod);
+        }
+        break;
+
+  }
+  return process_record_keymap(keycode, record);
+}
+
+
+// Tap dance
+qk_tap_dance_action_t tap_dance_actions[] = {
+  // Activate Obsidian on tap, open daily note on double tap
+  [TD_OBSIDIAN] = ACTION_TAP_DANCE_DOUBLE(LGUI(LSFT(KC_SCOLON)), LCTL(LSFT(KC_G)))
+};
+
+// Auto shift
+bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
+    if (IS_MT(keycode)){return true;}
+    return false;
+}
+
+// Caps word
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word, with shift applied.
+        case KC_A ... KC_Z:
+        case KC_MINS:
+        // KS_SCOLON is actually my o
+        case KC_SCOLON:
+            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            return true;
+
+        // Keycodes that continue Caps Word, without shifting.
+        case KC_1 ... KC_0:
+        case KC_BSPC:
+        case KC_DEL:
+        case KC_UNDS:
+            return true;
+
+        default:
+            return false;  // Deactivate Caps Word.
+    }
+}

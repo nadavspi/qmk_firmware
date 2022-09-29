@@ -3,16 +3,10 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 #define ORYX_CONFIGURATOR
-#define IGNORE_MOD_TAP_INTERRUPT
-#undef TAPPING_TERM
-#define TAPPING_TERM 185
-#define RETRO_SHIFT 300
-#define PERMISSIVE_HOLD
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #undef MOUSEKEY_WHEEL_TIME_TO_MAX
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 59
-#define AUTO_SHIFT_TIMEOUT 150
 #define FIRMWARE_VERSION u8"b7goQ/LApER"
 #define RAW_USAGE_PAGE 0xFF60
 #define RAW_USAGE_ID 0x61
@@ -20,6 +14,5 @@
 #define RGB_MATRIX_STARTUP_SPD 60
 #define MOONLANDER_USER_LEDS
 
-#define TAPPING_TOGGLE 1
 
 #define FORCE_NKRO
