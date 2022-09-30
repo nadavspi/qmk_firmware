@@ -30,7 +30,7 @@
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
 #define DEFAULT_R2 _________________QWERTY_R1_________________, KC_MINUS
 #define DEFAULT_R3 _________________QWERTY_R2_________________, KC_QUOTE
-#define DEFAULT_R4 _________________QWERTY_R3_________________, _______
+#define DEFAULT_R4 _________________QWERTY_R3_________________, KC_EQUAL
 
 #define RAISE_L1 _______, _______, _______, _______, _______, _______ 
 #define RAISE_L2 _______, _______, _______, KC_LBRACKET, KC_RBRACKET, KC_PIPE  

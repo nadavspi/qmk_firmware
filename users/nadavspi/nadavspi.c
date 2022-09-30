@@ -1,7 +1,10 @@
 #include "rgb_matrix.h"
+#include "sendstring_colemak.h"
 
 #include "nadavspi.h"
-#include "sendstring_colemak.h"
+#include "tapdance.c"
+#include "leader.c"
+
 
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
@@ -25,64 +28,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return process_record_keymap(keycode, record);
 }
 
-//Determine the current tap dance state
-int cur_dance (qk_tap_dance_state_t *state) {
-  if (state->count == 1) {
-    if (!state->pressed) {
-      return SINGLE_TAP;
-    } else {
-      return SINGLE_HOLD;
-    }
-  } else if (state->count == 2) {
-    return DOUBLE_TAP;
-  }
-  else return 8;
-}
-
-//Initialize tap structure associated with example tap dance key
-static tap alfred_raise_tap_state = {
-  .is_press_action = true,
-  .state = 0
-};
-
-//Functions that control what our tap dance key does
-void alfred_raise_finished (qk_tap_dance_state_t *state, void *user_data) {
-  alfred_raise_tap_state.state = cur_dance(state);
-  switch (alfred_raise_tap_state.state) {
-    case SINGLE_TAP: 
-      SEND_STRING(SS_LCTL(SS_TAP(X_SPACE))); 
-      break;
-    case SINGLE_HOLD: 
-      layer_on(_RAISE); 
-      break;
-    case DOUBLE_TAP: 
-      //check to see if the layer is already set
-      if (layer_state_is(_RAISE)) {
-        //if already set, then switch it off
-        layer_off(_RAISE);
-      } else { 
-        //if not already set, then switch the layer on
-        layer_on(_RAISE);
-      }
-      break;
-  }
-}
-
-void alfred_raise_reset (qk_tap_dance_state_t *state, void *user_data) {
-  //if the key was held down and now is released then switch off the layer
-  if (alfred_raise_tap_state.state==SINGLE_HOLD) {
-    layer_off(_RAISE);
-  }
-  alfred_raise_tap_state.state = 0;
-}
-
-
-// Tap dance
-qk_tap_dance_action_t tap_dance_actions[] = {
-  // Activate Obsidian on tap, open daily note on double tap
-  [TD_OBSIDIAN] = ACTION_TAP_DANCE_DOUBLE(LGUI(LSFT(KC_SCOLON)), LCTL(LSFT(KC_G))),
-  [TD_ALFRED_RAISE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alfred_raise_finished, alfred_raise_reset)
-};
 
 // Auto shift
 bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
@@ -125,14 +70,14 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
   // }
   
    if (get_highest_layer(layer_state) > 0) {
-        uint8_t layer = get_highest_layer(layer_state);
+        // uint8_t layer = get_highest_layer(layer_state);
 
         for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
             for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
                 uint8_t index = g_led_config.matrix_co[row][col];
 
-                if (index >= led_min && index <= led_max && index != NO_LED &&
-                keymap_key_to_keycode(layer, (keypos_t){col,row}) > KC_TRNS) {
+                if (index >= led_min && index <= led_max && index != NO_LED) {
+                //  keymap_key_to_keycode(layer, (keypos_t){col,row}) == KC_BSPACE) {
                   switch (get_highest_layer(layer_state)) {
                     case _LOWER:
                       rgb_matrix_set_color(index, RGB_ORANGE);

@@ -28,7 +28,10 @@ enum custom_keycodes {
 
 enum tap_dance_codes {
   TD_OBSIDIAN,
-  TD_ALFRED_RAISE
+  TD_ALFRED_RAISE,
+  TD_THROW_L,
+  TD_THROW_R,
+  TD_LEAD_LOWER
 };
 enum {
   SINGLE_TAP = 1,
