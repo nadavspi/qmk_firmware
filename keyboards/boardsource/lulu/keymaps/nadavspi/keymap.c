@@ -28,6 +28,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LOWER_L2, LOWER_R2,
     LOWER_L3, LOWER_R3,
     LOWER_L4, _______, _______, LOWER_R4,
-                               _______, _______, _______,  _______, _______,  _______, _______, _______
+                               _______, _______, _______,  _______, KC_BTN1,  _______, _______, _______
   ),
 };

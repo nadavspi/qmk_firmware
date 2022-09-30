@@ -50,4 +50,4 @@
 #define LOWER_R1 _______   , _______   , _______ , _______    , KC_MAKE, RESET
 #define LOWER_R2 KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______, _______
 #define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
-#define LOWER_R4 _______   , _______   , _______ , _______    , _______, _______
+#define LOWER_R4 KC_WH_L,    KC_WH_D,    KC_WH_U,  KC_WH_R ,    _______, _______
