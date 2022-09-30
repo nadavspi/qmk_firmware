@@ -10,6 +10,9 @@
 #define CLIPBOARD LALT(LGUI(KC_C))
 #define ZOOM_MUTE LGUI(LSFT(KC_M))
 #define RESET QK_BOOT
+#define RAISE MO(_RAISE)
+#define LOWER MO(_LOWER)
+
 
 enum userspace_layers {
   _DEFAULT,
@@ -24,7 +27,8 @@ enum custom_keycodes {
 };
 
 enum tap_dance_codes {
-  TD_OBSIDIAN
+  TD_OBSIDIAN,
+  TD_ALFRED_RAISE
 };
 enum {
   SINGLE_TAP = 1,
@@ -34,3 +38,7 @@ enum {
   DOUBLE_SINGLE_TAP,
   MORE_TAPS
 };
+typedef struct {
+  bool is_press_action;
+  int state;
+} tap;
