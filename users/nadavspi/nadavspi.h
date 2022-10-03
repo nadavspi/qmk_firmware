@@ -4,6 +4,8 @@
 #include "action.h"
 #include "version.h"
 
+#include "keymap_steno.h"
+
 #include "wrappers.h"
 
 #define ALFRED LCTL(KC_SPACE)
@@ -12,7 +14,6 @@
 #define RESET QK_BOOT
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
-
 
 enum userspace_layers {
   _DEFAULT,
@@ -31,7 +32,8 @@ enum tap_dance_codes {
   TD_ALFRED_RAISE,
   TD_THROW_L,
   TD_THROW_R,
-  TD_LEAD_LOWER
+  TD_LEAD_LOWER,
+  TD_RAISE_STENO
 };
 enum {
   SINGLE_TAP = 1,

@@ -28,7 +28,7 @@ void alfred_raise_finished (qk_tap_dance_state_t *state, void *user_data) {
       break;
     case SINGLE_HOLD: 
       layer_on(_RAISE); 
-      break;
+      break; 
     case DOUBLE_TAP: 
       //check to see if the layer is already set
       if (layer_state_is(_RAISE)) {
@@ -72,7 +72,39 @@ void lead_lower_reset (qk_tap_dance_state_t *state, void *user_data) {
   if (lead_lower_tap_state.state==SINGLE_HOLD) {
     layer_off(_LOWER);
   }
-  alfred_raise_tap_state.state = 0;
+  lead_lower_tap_state.state = 0;
+}
+
+static tap raise_steno_tap_state = {
+  .is_press_action = true,
+  .state = 0
+};
+
+void raise_steno_finished (qk_tap_dance_state_t *state, void *user_data) {
+  raise_steno_tap_state.state = current_dance(state);
+  switch (raise_steno_tap_state.state) {
+    case SINGLE_HOLD: 
+      layer_on(_RAISE); 
+      break;
+    case DOUBLE_TAP: 
+      //check to see if the layer is already set
+      if (layer_state_is(_STENO)) {
+        //if already set, then switch it off
+        layer_off(_STENO);
+      } else { 
+        //if not already set, then switch the layer on
+        layer_on(_STENO);
+      }
+      break;
+  }
+}
+
+void raise_steno_reset (qk_tap_dance_state_t *state, void *user_data) {
+  //if the key was held down and now is released then switch off the layer
+  if (raise_steno_tap_state.state==SINGLE_HOLD) {
+    layer_off(_RAISE);
+  }
+  raise_steno_tap_state.state = 0;
 }
 
 // Tap dance
@@ -82,5 +114,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_ALFRED_RAISE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alfred_raise_finished, alfred_raise_reset),
   [TD_THROW_L] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_H)), LALT(LGUI(KC_H))),
   [TD_THROW_R] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_I)), LALT(LGUI(KC_I))),
-  [TD_LEAD_LOWER] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, lead_lower_finished, lead_lower_reset)
+  [TD_LEAD_LOWER] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, lead_lower_finished, lead_lower_reset),
+  [TD_RAISE_STENO] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, raise_steno_finished, raise_steno_reset)
 };

@@ -62,12 +62,12 @@
 #define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
 #define LOWER_R4 KC_WH_L,    KC_WH_D,    KC_WH_U,  KC_WH_R ,    _______, _______
 
-#define STENO_L1 _______, _______, _______, _______, _______, _______ 
-#define STENO_L2 _______, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5
-#define STENO_L3 _______, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1
-#define STENO_L4 _______, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2
+#define STENO_L1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX 
+#define STENO_L2 XXXXXXX, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5
+#define STENO_L3 XXXXXXX, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1
+#define STENO_L4 XXXXXXX, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2
 
-#define STENO_R1 _______, _______, _______, _______, _______, _______ 
+#define STENO_R1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX 
 #define STENO_R2 STN_N6,  STN_N7, STN_N8, STN_N9, STN_NA, STN_NB
 #define STENO_R3 STN_ST3, STN_FR, STN_PR, STN_LR, STN_TR, STN_DR
-#define STENO_R4 STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR
+#define STENO_R4 STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR 

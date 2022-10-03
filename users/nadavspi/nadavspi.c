@@ -1,5 +1,4 @@
 #include "rgb_matrix.h"
-#include "sendstring_colemak.h"
 
 #include "nadavspi.h"
 #include "tapdance.c"
