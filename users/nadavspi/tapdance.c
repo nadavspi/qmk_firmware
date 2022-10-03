@@ -78,9 +78,9 @@ void lead_lower_reset (qk_tap_dance_state_t *state, void *user_data) {
 // Tap dance
 qk_tap_dance_action_t tap_dance_actions[] = {
   // Activate Obsidian on tap, open daily note on double tap
-  [TD_OBSIDIAN] = ACTION_TAP_DANCE_DOUBLE(LGUI(LSFT(KC_SCOLON)), LCTL(LSFT(KC_G))),
+  [TD_OBSIDIAN] = ACTION_TAP_DANCE_DOUBLE(LGUI(LSFT(KC_SCOLON)), LCTL(LSFT(KC_D))),
   [TD_ALFRED_RAISE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alfred_raise_finished, alfred_raise_reset),
   [TD_THROW_L] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_H)), LALT(LGUI(KC_H))),
-  [TD_THROW_R] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_L)), LALT(LGUI(KC_L))),
+  [TD_THROW_R] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_I)), LALT(LGUI(KC_I))),
   [TD_LEAD_LOWER] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, lead_lower_finished, lead_lower_reset)
 };

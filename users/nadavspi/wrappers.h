@@ -12,6 +12,16 @@
 #define _________________QWERTY_R2_________________       KC_H,    MT(MOD_RSFT, KC_J),MT(MOD_RGUI, KC_K),MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCOLON)
 #define _________________QWERTY_R3_________________       KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
+#define _________________COLEMAK_L1________________ KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
+#define _________________COLEMAK_L2_DEFAULT________ KC_A,    KC_R,    KC_S,    KC_T,    KC_D
+#define _________________COLEMAK_L2________________ MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LGUI, KC_S),MT(MOD_LSFT, KC_T),KC_D
+#define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
+
+#define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN
+#define _________________COLEMAK_R2_DEFAULT________ KC_H,    KC_N,    KC_E,    KC_I,    KC_O
+#define _________________COLEMAK_R2________________ KC_H,    MT(MOD_RSFT, KC_N),MT(MOD_RGUI, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RCTL, KC_O)
+#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
+
 
 #define ________________NUMBER_LEFT________________       KC_1,    KC_2,    KC_3,    KC_4,    KC_5
 #define ________________NUMBER_RIGHT_______________       KC_6,    KC_7,    KC_8,    KC_9,    KC_0
@@ -23,14 +33,14 @@
 
 // Layers
 #define DEFAULT_L1 KC_ESCAPE, ________________NUMBER_LEFT________________
-#define DEFAULT_L2 KC_TAB,    _________________QWERTY_L1_________________
-#define DEFAULT_L3 KC_BSPACE, _________________QWERTY_L2_________________
-#define DEFAULT_L4 CAPSWRD,   _________________QWERTY_L3_________________
+#define DEFAULT_L2 KC_TAB,    _________________COLEMAK_L1________________
+#define DEFAULT_L3 KC_BSPACE, _________________COLEMAK_L2________________
+#define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
 
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
-#define DEFAULT_R2 _________________QWERTY_R1_________________, KC_MINUS
-#define DEFAULT_R3 _________________QWERTY_R2_________________, KC_QUOTE
-#define DEFAULT_R4 _________________QWERTY_R3_________________, KC_EQUAL
+#define DEFAULT_R2 _________________COLEMAK_R1________________, KC_MINUS
+#define DEFAULT_R3 _________________COLEMAK_R2________________, KC_QUOTE
+#define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
 
 #define RAISE_L1 _______, _______, _______, _______, _______, _______ 
 #define RAISE_L2 _______, _______, _______, KC_LBRACKET, KC_RBRACKET, KC_PIPE  
@@ -51,3 +61,13 @@
 #define LOWER_R2 KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______, _______
 #define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
 #define LOWER_R4 KC_WH_L,    KC_WH_D,    KC_WH_U,  KC_WH_R ,    _______, _______
+
+#define STENO_L1 _______, _______, _______, _______, _______, _______ 
+#define STENO_L2 _______, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5
+#define STENO_L3 _______, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1
+#define STENO_L4 _______, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2
+
+#define STENO_R1 _______, _______, _______, _______, _______, _______ 
+#define STENO_R2 STN_N6,  STN_N7, STN_N8, STN_N9, STN_NA, STN_NB
+#define STENO_R3 STN_ST3, STN_FR, STN_PR, STN_LR, STN_TR, STN_DR
+#define STENO_R4 STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR
