@@ -13,7 +13,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   #ifdef CONSOLE_ENABLE
-    uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
+    uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, index: %2u\n", keycode, record->event.key.col, record->event.key.row, g_led_config.matrix_co[record->event.key.row][record->event.key.col]);
   #endif 
   switch (keycode) {
     case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
@@ -64,16 +64,13 @@ bool caps_word_press_user(uint16_t keycode) {
 void keyboard_post_init_user(void) {
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
     rgb_matrix_sethsv_noeeprom(HSV_OFF);
+    #ifdef CONSOLE_ENABLE
     debug_enable=true;
     debug_matrix=true;
+    #endif 
 }
 
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-  // if (layer_state_is(_DEFAULT)) {
-  //   RGB_MATRIX_INDICATOR_SET_COLOR(22, 31, 255, 255);
-  //   RGB_MATRIX_INDICATOR_SET_COLOR(58, 31, 255, 255);
-  // }
-  
    if (get_highest_layer(layer_state) > 0) {
         uint8_t layer = get_highest_layer(layer_state);
 
@@ -82,7 +79,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                 uint8_t index = g_led_config.matrix_co[row][col];
 
                 if (index >= led_min && index <= led_max && index != NO_LED &&
-                 keymap_key_to_keycode(layer, (keypos_t){col,row}) > 1) {
+                 keymap_key_to_keycode(layer, (keypos_t){col,row}) > KC_TRNS) {
                   switch (get_highest_layer(layer_state)) {
                     case _LOWER:
                       rgb_matrix_set_color(index, RGB_ORANGE);
