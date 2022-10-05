@@ -7,6 +7,7 @@ void matrix_scan_user(void) {
     leading = false;
     leader_end();
 
+    // App switching
     SEQ_TWO_KEYS(KC_O, KC_F) {
       tap_code16(HYPR(KC_F));
     }
@@ -33,6 +34,20 @@ void matrix_scan_user(void) {
 
     SEQ_TWO_KEYS(KC_O, KC_D) {
       tap_code16(HYPR(KC_D));
+    }
+
+
+    // CleanShot
+    SEQ_TWO_KEYS(KC_S, KC_S) {
+      tap_code16(HYPR(KC_1));
+    }
+
+    SEQ_TWO_KEYS(KC_S, KC_L) {
+      tap_code16(HYPR(KC_2));
+    }
+
+    SEQ_TWO_KEYS(KC_S, KC_H) {
+      tap_code16(HYPR(KC_3));
     }
   }
 }
