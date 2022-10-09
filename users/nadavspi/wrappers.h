@@ -32,7 +32,7 @@
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
 // Layers
-#define DEFAULT_L1 KC_ESCAPE, ________________NUMBER_LEFT________________
+#define DEFAULT_L1 _______, ________________NUMBER_LEFT________________
 #define DEFAULT_L2 KC_TAB,    _________________COLEMAK_L1________________
 #define DEFAULT_L3 KC_BSPACE, _________________COLEMAK_L2________________
 #define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
@@ -47,10 +47,10 @@
 #define RAISE_L3 _______, _______, _______, KC_LPRN,     KC_RPRN,     KC_GRAVE    
 #define RAISE_L4 _______, _______, _______, KC_LCBR,     KC_RCBR,     KC_BSLASH
 
-#define RAISE_R1 _______, _______, _______, _______, _______, _______ 
-#define RAISE_R2 _______, _______, _______, _______, _______, _______ 
-#define RAISE_R3 _______, _______, _______, _______, _______, _______ 
-#define RAISE_R4 _______, _______, _______, _______, _______, _______ 
+#define RAISE_R1 _______, _______, _______, _______, KC_KP_SLASH,    _______ 
+#define RAISE_R2 _______, KC_7,    KC_8,    KC_9,    KC_KP_ASTERISK, _______ 
+#define RAISE_R3 _______, KC_4,    KC_5,    KC_6,    KC_KP_MINUS,    _______ 
+#define RAISE_R4 KC_0,    KC_1,    KC_2,    KC_3,    KC_KP_PLUS,     _______ 
 
 #define LOWER_L1 _______,  _______,             _______,      _______,           _______,              _______
 #define LOWER_L2 _______,  _______,             _______,      _______,           LGUI(LSFT(KC_SPACE)), _______
