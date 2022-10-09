@@ -14,4 +14,4 @@
 #define MOUSEKEY_MAX_SPEED 7
 #define MOUSEKEY_WHEEL_DELAY 0
 
-#define FORCE_NKRO
+#define COMBO_TERM 40

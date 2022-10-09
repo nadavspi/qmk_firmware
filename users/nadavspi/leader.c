@@ -49,5 +49,10 @@ void matrix_scan_user(void) {
     SEQ_TWO_KEYS(KC_S, KC_H) {
       tap_code16(HYPR(KC_3));
     }
+
+    // Yabai
+    SEQ_TWO_KEYS(KC_Y, KC_S) {
+      tap_code16(HYPR(KC_TAB));
+    }
   }
 }

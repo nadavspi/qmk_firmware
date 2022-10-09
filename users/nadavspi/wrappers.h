@@ -38,7 +38,7 @@
 #define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
 
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
-#define DEFAULT_R2 _________________COLEMAK_R1________________, KC_MINUS
+#define DEFAULT_R2 _________________COLEMAK_R1________________, _______
 #define DEFAULT_R3 _________________COLEMAK_R2________________, KC_QUOTE
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
 
