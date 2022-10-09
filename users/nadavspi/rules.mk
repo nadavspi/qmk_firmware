@@ -5,6 +5,5 @@ CAPS_WORD_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 LEADER_ENABLE = yes
 
-STENO_ENABLE = yes
-STENO_PROTOCOL = geminipr
-NKRO_ENABLE = yes
+COMBO_ENABLE = yes
+VPATH += keyboards/gboards
