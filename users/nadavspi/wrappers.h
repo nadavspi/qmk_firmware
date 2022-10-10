@@ -43,9 +43,9 @@
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
 
 #define RAISE_L1 _______, _______, _______, _______, _______, _______ 
-#define RAISE_L2 _______, _______, _______, KC_LBRACKET, KC_RBRACKET, KC_PIPE  
-#define RAISE_L3 _______, _______, _______, KC_LPRN,     KC_RPRN,     KC_GRAVE    
-#define RAISE_L4 _______, _______, _______, KC_LCBR,     KC_RCBR,     KC_BSLASH
+#define RAISE_L2 _______, _______, _______, _______, _______, KC_PIPE  
+#define RAISE_L3 _______, G(KC_1), G(KC_2), G(KC_3), G(KC_4), G(KC_5)   
+#define RAISE_L4 _______, _______, _______, _______, _______, _______
 
 #define RAISE_R1 _______, _______, _______, _______, KC_KP_SLASH,    _______ 
 #define RAISE_R2 _______, KC_7,    KC_8,    KC_9,    KC_KP_ASTERISK, _______ 
