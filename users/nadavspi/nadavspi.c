@@ -6,6 +6,10 @@
 #include "leader.c"
 #include "g/keymap_combo.h"
 
+#ifdef OLED_ENABLE
+#include "oled.c"
+#endif
+
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
   return true;
@@ -34,30 +38,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Auto shift
 bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
-    if (IS_MT(keycode)){return true;}
+    if (IS_MT(keycode)) { return true; }
+
     return false;
 }
 
 // Caps word
 bool caps_word_press_user(uint16_t keycode) {
+    if (IS_MT(keycode)) { 
+      add_weak_mods(MOD_BIT(KC_LSFT));
+      return true; 
+    }
+
     switch (keycode) {
-        // Keycodes that continue Caps Word, with shift applied.
-        case KC_A ... KC_Z:
-        case KC_MINS:
-        // KS_SCOLON is actually my o
-        case KC_SCOLON:
-            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
-            return true;
+      // Keycodes that continue Caps Word, with shift applied.
+      case KC_A ... KC_Z:
+      case KC_MINS:
+        add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to the next key.
+        return true;
 
-        // Keycodes that continue Caps Word, without shifting.
-        case KC_1 ... KC_0:
-        case KC_BSPC:
-        case KC_DEL:
-        case KC_UNDS:
-            return true;
+      // Keycodes that continue Caps Word, without shifting.
+      case KC_1 ... KC_0:
+      case KC_BSPC:
+      case KC_DEL:
+      case KC_UNDS:
+        return true;
 
-        default:
-            return false;  // Deactivate Caps Word.
+      default:
+        return false;  // Deactivate Caps Word.
     }
 }
 
@@ -98,3 +106,23 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         }
     }
 }
+
+#ifdef ENCODER_ENABLE
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) {
+        if (clockwise) {
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+        }
+    } else if (index == 1) {
+        if (clockwise) {
+            tap_code(KC_PGDN);
+        } else {
+            tap_code(KC_PGUP);
+        }
+    }
+    return true;
+}
+#endif
+
