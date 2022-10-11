@@ -5,7 +5,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DEFAULT] = LAYOUT_wrapper(
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+    DEFAULT_L1,                    DEFAULT_R1,
     DEFAULT_L2,                    DEFAULT_R2,
     DEFAULT_L3,                    DEFAULT_R3,
     DEFAULT_L4, ZOOM_MUTE,  KC_RBRC, DEFAULT_R4,
@@ -28,7 +28,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                TD(TD_THROW_L), TD(TD_THROW_R), _______,   _______, KC_BTN1,  KC_BTN2, _______, _______
   )
 };
-
-void caps_word_set_user(bool active) {
-}
-
