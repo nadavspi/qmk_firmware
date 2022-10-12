@@ -32,11 +32,11 @@
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
 // Layers
-#define DEFAULT_L1 _______, ________________NUMBER_LEFT________________
+#define DEFAULT_L1 _______,   ________________NUMBER_LEFT________________
 #define DEFAULT_L2 KC_TAB,    _________________COLEMAK_L1________________
 #define DEFAULT_L3 KC_BSPACE, _________________COLEMAK_L2________________
 #define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
-#define DEFAULT_L5 RAISE, _______, LT(RAISE, KC_SPC)
+#define DEFAULT_L5 _______, _______, LT(RAISE, KC_SPC)
 #define DEFAULT_L_THUMB TD(TD_LEAD_LOWER)
 
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
@@ -44,7 +44,7 @@
 #define DEFAULT_R3 _________________COLEMAK_R2________________, KC_QUOTE
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
 #define DEFAULT_R_THUMB TD(TD_ALFRED_RAISE)
-#define DEFAULT_R5 KC_ENT, TD(TD_OBSIDIAN), LOWER 
+#define DEFAULT_R5 LT(LOWER, KC_ENT), TD(TD_OBSIDIAN), _______
 
 #define RAISE_L1 _______, _______, _______, _______, _______, _______
 #define RAISE_L2 _______, _______, _______, _______, _______, KC_PIPE  
