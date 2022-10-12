@@ -46,7 +46,7 @@
 #define DEFAULT_R_THUMB TD(TD_ALFRED_RAISE)
 #define DEFAULT_R5 KC_ENT, TD(TD_OBSIDIAN), LOWER 
 
-#define RAISE_L1 _______, _______, _______, _______, _______, _______ 
+#define RAISE_L1 _______, _______, _______, _______, _______, _______
 #define RAISE_L2 _______, _______, _______, _______, _______, KC_PIPE  
 #define RAISE_L3 _______, G(KC_1), G(KC_2), G(KC_3), G(KC_4), G(KC_5)   
 #define RAISE_L4 _______, _______, _______, _______, _______, _______
@@ -60,10 +60,10 @@
 #define RAISE_R_THUMB _______
 #define RAISE_R5 _______, _______, _______
 
-#define LOWER_L1 _______,  _______,             _______,      _______,           _______,              _______
-#define LOWER_L2 _______,  _______,             _______,      _______,           LGUI(LSFT(KC_SPACE)), _______
-#define LOWER_L3 _______,  KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,     ZOOM_MUTE
-#define LOWER_L4 _______,  _______,             _______,      CLIPBOARD,         LGUI(KC_BSLASH),      _______
+#define LOWER_L1 _______, _______, _______, _______, _______, _______
+#define LOWER_L2 _______, G(KC_F14), G(KC_F15), KC_F14, KC_F15, _______
+#define LOWER_L3 _______, KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, ZOOM_MUTE
+#define LOWER_L4 _______, _______, _______, CLIPBOARD, LGUI(KC_BSLASH), _______
 #define LOWER_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
 #define LOWER_R_THUMB _______
 
