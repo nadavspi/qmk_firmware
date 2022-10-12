@@ -21,3 +21,7 @@
 #define MOUSEKEY_WHEEL_DELAY 0
 
 #define COMBO_TERM 40
+
+#ifdef OLED_ENABLE
+#define OLED_BRIGHTNESS 5
+#endif
