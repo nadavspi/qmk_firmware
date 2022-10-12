@@ -36,31 +36,44 @@
 #define DEFAULT_L2 KC_TAB,    _________________COLEMAK_L1________________
 #define DEFAULT_L3 KC_BSPACE, _________________COLEMAK_L2________________
 #define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
+#define DEFAULT_L5 RAISE, _______, LT(RAISE, KC_SPC)
+#define DEFAULT_L_THUMB TD(TD_LEAD_LOWER)
 
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
 #define DEFAULT_R2 _________________COLEMAK_R1________________, _______
 #define DEFAULT_R3 _________________COLEMAK_R2________________, KC_QUOTE
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
+#define DEFAULT_R_THUMB TD(TD_ALFRED_RAISE)
+#define DEFAULT_R5 KC_ENT, TD(TD_OBSIDIAN), LOWER 
 
 #define RAISE_L1 _______, _______, _______, _______, _______, _______ 
 #define RAISE_L2 _______, _______, _______, _______, _______, KC_PIPE  
 #define RAISE_L3 _______, G(KC_1), G(KC_2), G(KC_3), G(KC_4), G(KC_5)   
 #define RAISE_L4 _______, _______, _______, _______, _______, _______
+#define RAISE_L5 _______, _______, _______
+#define RAISE_L_THUMB _______
 
 #define RAISE_R1 _______, _______, _______, _______, KC_KP_SLASH,    _______ 
 #define RAISE_R2 _______, KC_7,    KC_8,    KC_9,    KC_KP_ASTERISK, _______ 
 #define RAISE_R3 _______, KC_4,    KC_5,    KC_6,    KC_KP_MINUS,    _______ 
 #define RAISE_R4 KC_0,    KC_1,    KC_2,    KC_3,    KC_KP_PLUS,     _______ 
+#define RAISE_R_THUMB _______
+#define RAISE_R5 _______, _______, _______
 
 #define LOWER_L1 _______,  _______,             _______,      _______,           _______,              _______
 #define LOWER_L2 _______,  _______,             _______,      _______,           LGUI(LSFT(KC_SPACE)), _______
 #define LOWER_L3 _______,  KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,     ZOOM_MUTE
 #define LOWER_L4 _______,  _______,             _______,      CLIPBOARD,         LGUI(KC_BSLASH),      _______
+#define LOWER_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
+#define LOWER_R_THUMB _______
 
 #define LOWER_R1 _______   , _______   , _______ , _______    , KC_MAKE, RESET
 #define LOWER_R2 KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______, _______
 #define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
 #define LOWER_R4 KC_WH_L,    KC_WH_D,    KC_WH_U,  KC_WH_R ,    _______, _______
+#define LOWER_L_THUMB KC_BTN1 
+#define LOWER_R5 KC_BTN2, _______, _______
+   
 
 #define STENO_L1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX 
 #define STENO_L2 XXXXXXX, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5

@@ -11,6 +11,7 @@
 #define ALFRED LCTL(KC_SPACE)
 #define CLIPBOARD LALT(LGUI(KC_C))
 #define ZOOM_MUTE LGUI(LSFT(KC_M))
+#undef RESET
 #define RESET QK_BOOT
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)

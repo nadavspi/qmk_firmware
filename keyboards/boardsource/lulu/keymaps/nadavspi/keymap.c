@@ -8,8 +8,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DEFAULT_L1,                    DEFAULT_R1,
     DEFAULT_L2,                    DEFAULT_R2,
     DEFAULT_L3,                    DEFAULT_R3,
-    DEFAULT_L4, ZOOM_MUTE,  KC_RBRC, DEFAULT_R4,
-                RAISE, _______, LT(RAISE, KC_SPC), TD(TD_LEAD_LOWER),         TD(TD_ALFRED_RAISE), KC_ENT, TD(TD_OBSIDIAN), LOWER
+    DEFAULT_L4, ZOOM_MUTE,  _______, DEFAULT_R4,
+              DEFAULT_L5, DEFAULT_L_THUMB, DEFAULT_R_THUMB, DEFAULT_R5        
   ),
 
   [_RAISE] = LAYOUT_wrapper(
@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RAISE_L2, RAISE_R2,
     RAISE_L3, RAISE_R3,
     RAISE_L4, _______, _______, RAISE_R4,
-                               _______, _______, _______,  _______, _______,  _______, _______, _______
+    RAISE_L5, RAISE_L_THUMB, RAISE_R_THUMB, RAISE_R5
   ),
 
   [_LOWER] = LAYOUT_wrapper(
@@ -25,6 +25,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LOWER_L2, LOWER_R2,
     LOWER_L3, LOWER_R3,
     LOWER_L4, _______, _______, LOWER_R4,
-                               TD(TD_THROW_L), TD(TD_THROW_R), _______,   _______, KC_BTN1,  KC_BTN2, _______, _______
+    LOWER_L5, LOWER_L_THUMB, LOWER_R_THUMB, LOWER_R5                          
   )
 };
