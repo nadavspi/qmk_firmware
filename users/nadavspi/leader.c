@@ -51,8 +51,21 @@ void matrix_scan_user(void) {
     }
 
     // Yabai
-    SEQ_TWO_KEYS(KC_Y, KC_S) {
-      tap_code16(HYPR(KC_TAB));
+    // stacks
+    SEQ_THREE_KEYS(KC_Y, KC_S, KC_H) {
+      tap_code16(HYPR(KC_LEFT));
+    }
+
+    SEQ_THREE_KEYS(KC_Y, KC_S, KC_N) {
+      tap_code16(HYPR(KC_DOWN));
+    }
+
+    SEQ_THREE_KEYS(KC_Y, KC_S, KC_E) {
+      tap_code16(HYPR(KC_UP));
+    }
+
+    SEQ_THREE_KEYS(KC_Y, KC_S, KC_I) {
+      tap_code16(HYPR(KC_RIGHT));
     }
   }
 }
