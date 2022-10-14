@@ -53,12 +53,12 @@
 #define RAISE_L5 _______, _______, _______
 #define RAISE_L_THUMB _______
 
-#define RAISE_R1 _______, _______, _______, _______, KC_KP_SLASH,    _______ 
-#define RAISE_R2 _______, KC_7,    KC_8,    KC_9,    KC_KP_ASTERISK, _______ 
-#define RAISE_R3 _______, KC_4,    KC_5,    KC_6,    KC_KP_MINUS,    _______ 
-#define RAISE_R4 KC_0,    KC_1,    KC_2,    KC_3,    KC_KP_PLUS,     _______ 
-#define RAISE_R_THUMB _______
-#define RAISE_R5 _______, _______, _______
+#define RAISE_R1 _______,   _______, _______, _______, KC_KP_SLASH,    _______ 
+#define RAISE_R2 _______,   KC_7,    KC_8,    KC_9,    KC_KP_ASTERISK, _______ 
+#define RAISE_R3 _______,   KC_4,    KC_5,    KC_6,    KC_KP_MINUS,    _______ 
+#define RAISE_R4 KC_BSPACE, KC_1,    KC_2,    KC_3,    KC_KP_PLUS,     _______ 
+#define RAISE_R_THUMB  KC_ENT
+#define RAISE_R5 KC_0, _______, _______
 
 #define LOWER_L1 _______, _______, _______, _______, _______, _______
 #define LOWER_L2 _______, G(KC_F14), G(KC_F15), KC_F14, KC_F15, _______
