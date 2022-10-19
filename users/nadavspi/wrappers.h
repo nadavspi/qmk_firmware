@@ -91,10 +91,10 @@
 
 #define FUNC_L1 _______, _______, _______, _______, _______, _______
 #define FUNC_L2 KC_BRID, KC_BRIU, KC_MUTE, KC_VOLD, KC_VOLU, ZOOM_MUTE
-#define FUNC_L3 _______, _______, _______, SPACE_L, SPACE_R, ALFRED
+#define FUNC_L3 KVM,     _______, _______, SPACE_L, SPACE_R, ALFRED
 #define FUNC_L4 _______, BACK,    FWD,     TAB_L,   TAB_R,   CTXS
 #define FUNC_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
-#define FUNC_L_THUMB KVM
+#define FUNC_L_THUMB _______
 
 #define FUNC_R1 _______, _______, _______, _______, KC_MAKE, RESET
 #define FUNC_R2 _______, _______, _______, _______, _______, _______
