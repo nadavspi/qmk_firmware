@@ -1,4 +1,5 @@
 SRC += nadavspi.c
+SRC += swapper.c
 
 AUTO_SHIFT_ENABLE = yes
 CAPS_WORD_ENABLE = yes

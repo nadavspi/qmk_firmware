@@ -61,17 +61,17 @@
 #define RAISE_R5 KC_0, _______, _______
 
 #define LOWER_L1 _______, _______, _______, _______, _______, _______
-#define LOWER_L2 _______, G(KC_F14), G(KC_F15), KC_F14, KC_F15, _______
-#define LOWER_L3 _______, KC_MEDIA_PLAY_PAUSE, KC_AUDIO_MUTE, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, ZOOM_MUTE
-#define LOWER_L4 _______, _______, _______, CLIPBOARD, LGUI(KC_BSLASH), _______
+#define LOWER_L2 KC_BRID, KC_BRIU, KC_MUTE, KC_VOLD, KC_VOLU, ZOOM_MUTE
+#define LOWER_L3 _______, _______, _______, SPACE_L, SPACE_R, _______
+#define LOWER_L4 _______, BACK,    FWD,     TAB_L,   TAB_R,   SW_WIN
 #define LOWER_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
-#define LOWER_R_THUMB _______
+#define LOWER_L_THUMB KVM
 
 #define LOWER_R1 _______   , _______   , _______ , _______    , KC_MAKE, RESET
 #define LOWER_R2 KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______, _______
 #define LOWER_R3 KC_LEFT   , KC_DOWN   , KC_UP   , KC_RIGHT   , _______, _______
 #define LOWER_R4 KC_WH_L,    KC_WH_D,    KC_WH_U,  KC_WH_R ,    _______, _______
-#define LOWER_L_THUMB KC_BTN1 
+#define LOWER_R_THUMB KC_BTN1 
 #define LOWER_R5 KC_BTN2, _______, _______
    
 

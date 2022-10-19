@@ -2,6 +2,7 @@
 #include "print.h"
 
 #include "nadavspi.h"
+#include "swapper.h"
 #include "tapdance.c"
 #include "leader.c"
 #include "g/keymap_combo.h"
@@ -15,10 +16,18 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
+bool sw_win_active = false;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   #ifdef CONSOLE_ENABLE
     uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, index: %2u\n", keycode, record->event.key.col, record->event.key.row, g_led_config.matrix_co[record->event.key.row][record->event.key.col]);
   #endif 
+
+  update_swapper(
+    &sw_win_active, KC_LGUI, KC_TAB, SW_WIN,
+    keycode, record
+  );
+
   switch (keycode) {
     case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
             if (!record->event.pressed) {

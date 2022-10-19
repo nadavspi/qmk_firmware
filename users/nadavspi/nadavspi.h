@@ -15,6 +15,13 @@
 #define RESET QK_BOOT
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
+#define FWD G(KC_RBRC)
+#define BACK G(KC_LBRC)
+#define TAB_L G(S(KC_LBRC))
+#define TAB_R G(S(KC_RBRC))
+#define SPACE_L C(KC_LEFT)
+#define SPACE_R C(KC_RGHT)
+#define KVM G(KC_F15)
 
 enum userspace_layers {
   _DEFAULT,
@@ -25,6 +32,7 @@ enum userspace_layers {
 
 enum custom_keycodes {
   KC_MAKE = SAFE_RANGE,
+  SW_WIN,
   NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
 };
 
