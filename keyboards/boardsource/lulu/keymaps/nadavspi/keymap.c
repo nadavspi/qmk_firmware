@@ -26,5 +26,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     FUNC_L3, FUNC_R3,
     FUNC_L4, _______, _______, FUNC_R4,
     FUNC_L5, FUNC_L_THUMB, FUNC_R_THUMB, FUNC_R5                          
+  ),
+
+   [_SYM] = LAYOUT_wrapper(
+    SYM_L1, SYM_R1,
+    SYM_L2, SYM_R2,
+    SYM_L3, SYM_R3,
+    SYM_L4, _______, _______, SYM_R4,
+    SYM_L5, SYM_L_THUMB, SYM_R_THUMB, SYM_R5                          
   )
 };

@@ -1,5 +1,7 @@
 #pragma once
 
+#define LAYER_STATE_8BIT
+
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 150
 #define RETRO_SHIFT 300
@@ -7,6 +9,7 @@
 #define AUTO_SHIFT_TIMEOUT 160
 #define AUTO_SHIFT_NO_SETUP
 #define NO_AUTO_SHIFT_ALPHA
+#define NO_AUTO_SHIFT_NUMERIC
 #define TAPPING_TOGGLE 1
 #define LEADER_TIMEOUT 300
 

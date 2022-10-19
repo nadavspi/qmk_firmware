@@ -22,17 +22,18 @@
 #define SPACE_L C(KC_LEFT)
 #define SPACE_R C(KC_RGHT)
 #define KVM G(KC_F15)
+#define CTXS S(G(KC_TAB))
 
 enum userspace_layers {
   _DEFAULT,
   _NUM,
   _FUNC,
+  _SYM,
   _STENO,
 };
 
 enum custom_keycodes {
   KC_MAKE = SAFE_RANGE,
-  SW_WIN,
   NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
 };
 

@@ -1,5 +1,7 @@
 SRC += nadavspi.c
-SRC += swapper.c
+
+CONSOLE_ENABLE = no
+MOUSEKEY_ENABLE = no
 
 AUTO_SHIFT_ENABLE = yes
 CAPS_WORD_ENABLE = yes
