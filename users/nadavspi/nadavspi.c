@@ -35,14 +35,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return process_record_keymap(keycode, record);
 }
 
-
-// Auto shift
-bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
-    if (IS_MT(keycode)) { return true; }
-
-    return false;
-}
-
 // Caps word
 bool caps_word_press_user(uint16_t keycode) {
     if (IS_MT(keycode)) { 
