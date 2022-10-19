@@ -29,16 +29,6 @@ void alfred_raise_finished (qk_tap_dance_state_t *state, void *user_data) {
     case SINGLE_HOLD: 
       layer_on(_RAISE); 
       break; 
-    case DOUBLE_TAP: 
-      //check to see if the layer is already set
-      if (layer_state_is(_RAISE)) {
-        //if already set, then switch it off
-        layer_off(_RAISE);
-      } else { 
-        //if not already set, then switch the layer on
-        layer_on(_RAISE);
-      }
-      break;
   }
 }
 
