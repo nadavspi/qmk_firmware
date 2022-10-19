@@ -41,7 +41,7 @@
 
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
 #define DEFAULT_R2 _________________COLEMAK_R1________________, _______
-#define DEFAULT_R3 _________________COLEMAK_R2________________, KC_QUOTE
+#define DEFAULT_R3 _________________COLEMAK_R2________________, _______
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
 #define DEFAULT_R_THUMB TD(TD_ALFRED_RAISE)
 #define DEFAULT_R5 LT(LOWER, KC_ENT), TD(TD_OBSIDIAN), _______
