@@ -12,19 +12,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               DEFAULT_L5, DEFAULT_L_THUMB, DEFAULT_R_THUMB, DEFAULT_R5        
   ),
 
-  [_RAISE] = LAYOUT_wrapper(
-    RAISE_L1, RAISE_R1,
-    RAISE_L2, RAISE_R2,
-    RAISE_L3, RAISE_R3,
-    RAISE_L4, _______, _______, RAISE_R4,
-    RAISE_L5, RAISE_L_THUMB, RAISE_R_THUMB, RAISE_R5
+  [_NUM] = LAYOUT_wrapper(
+    NUM_L1, NUM_R1,
+    NUM_L2, NUM_R2,
+    NUM_L3, NUM_R3,
+    NUM_L4, _______, _______, NUM_R4,
+    NUM_L5, NUM_L_THUMB, NUM_R_THUMB, NUM_R5
   ),
 
-  [_LOWER] = LAYOUT_wrapper(
-    LOWER_L1, LOWER_R1,
-    LOWER_L2, LOWER_R2,
-    LOWER_L3, LOWER_R3,
-    LOWER_L4, _______, _______, LOWER_R4,
-    LOWER_L5, LOWER_L_THUMB, LOWER_R_THUMB, LOWER_R5                          
+  [_FUNC] = LAYOUT_wrapper(
+    FUNC_L1, FUNC_R1,
+    FUNC_L2, FUNC_R2,
+    FUNC_L3, FUNC_R3,
+    FUNC_L4, _______, _______, FUNC_R4,
+    FUNC_L5, FUNC_L_THUMB, FUNC_R_THUMB, FUNC_R5                          
   )
 };

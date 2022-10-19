@@ -14,55 +14,55 @@ int current_dance (qk_tap_dance_state_t *state) {
   else return 8;
 }
 
-static tap alfred_raise_tap_state = {
+static tap alfred_num_tap_state = {
   .is_press_action = true,
   .state = 0
 };
 
 //Functions that control what our tap dance key does
-void alfred_raise_finished (qk_tap_dance_state_t *state, void *user_data) {
-  alfred_raise_tap_state.state = current_dance(state);
-  switch (alfred_raise_tap_state.state) {
+void alfred_num_finished (qk_tap_dance_state_t *state, void *user_data) {
+  alfred_num_tap_state.state = current_dance(state);
+  switch (alfred_num_tap_state.state) {
     case SINGLE_TAP: 
       SEND_STRING(SS_LCTL(SS_TAP(X_SPACE))); 
       break;
     case SINGLE_HOLD: 
-      layer_on(_RAISE); 
+      layer_on(_NUM); 
       break; 
   }
 }
 
-void alfred_raise_reset (qk_tap_dance_state_t *state, void *user_data) {
+void alfred_num_reset (qk_tap_dance_state_t *state, void *user_data) {
   //if the key was held down and now is released then switch off the layer
-  if (alfred_raise_tap_state.state==SINGLE_HOLD) {
-    layer_off(_RAISE);
+  if (alfred_num_tap_state.state==SINGLE_HOLD) {
+    layer_off(_NUM);
   }
-  alfred_raise_tap_state.state = 0;
+  alfred_num_tap_state.state = 0;
 }
 
-static tap lead_lower_tap_state = {
+static tap lead_func_tap_state = {
   .is_press_action = true,
   .state = 0
 };
 
-void lead_lower_finished (qk_tap_dance_state_t *state, void *user_data) {
-  lead_lower_tap_state.state = current_dance(state);
-  switch (lead_lower_tap_state.state) {
+void lead_func_finished (qk_tap_dance_state_t *state, void *user_data) {
+  lead_func_tap_state.state = current_dance(state);
+  switch (lead_func_tap_state.state) {
     case SINGLE_TAP: 
       qk_leader_start();
       break;
     case SINGLE_HOLD: 
-      layer_on(_LOWER); 
+      layer_on(_FUNC); 
       break;
   }
 }
 
-void lead_lower_reset (qk_tap_dance_state_t *state, void *user_data) {
+void lead_func_reset (qk_tap_dance_state_t *state, void *user_data) {
   //if the key was held down and now is released then switch off the layer
-  if (lead_lower_tap_state.state==SINGLE_HOLD) {
-    layer_off(_LOWER);
+  if (lead_func_tap_state.state==SINGLE_HOLD) {
+    layer_off(_FUNC);
   }
-  lead_lower_tap_state.state = 0;
+  lead_func_tap_state.state = 0;
 }
 
 static tap raise_steno_tap_state = {
@@ -74,7 +74,7 @@ void raise_steno_finished (qk_tap_dance_state_t *state, void *user_data) {
   raise_steno_tap_state.state = current_dance(state);
   switch (raise_steno_tap_state.state) {
     case SINGLE_HOLD: 
-      layer_on(_RAISE); 
+      layer_on(_NUM); 
       break;
     case DOUBLE_TAP: 
       //check to see if the layer is already set
@@ -92,7 +92,7 @@ void raise_steno_finished (qk_tap_dance_state_t *state, void *user_data) {
 void raise_steno_reset (qk_tap_dance_state_t *state, void *user_data) {
   //if the key was held down and now is released then switch off the layer
   if (raise_steno_tap_state.state==SINGLE_HOLD) {
-    layer_off(_RAISE);
+    layer_off(_NUM);
   }
   raise_steno_tap_state.state = 0;
 }
@@ -101,9 +101,9 @@ void raise_steno_reset (qk_tap_dance_state_t *state, void *user_data) {
 qk_tap_dance_action_t tap_dance_actions[] = {
   // Activate Obsidian on tap, open daily note on double tap
   [TD_OBSIDIAN] = ACTION_TAP_DANCE_DOUBLE(LGUI(LSFT(KC_SCOLON)), LCTL(LSFT(KC_D))),
-  [TD_ALFRED_RAISE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alfred_raise_finished, alfred_raise_reset),
+  [TD_ALFRED_NUM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, alfred_num_finished, alfred_num_reset),
   [TD_THROW_L] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_H)), LALT(LGUI(KC_H))),
   [TD_THROW_R] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_I)), LALT(LGUI(KC_I))),
-  [TD_LEAD_LOWER] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, lead_lower_finished, lead_lower_reset),
-  [TD_RAISE_STENO] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, raise_steno_finished, raise_steno_reset)
+  [TD_LEAD_FUNC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, lead_func_finished, lead_func_reset),
+  [TD_NUM_STENO] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, raise_steno_finished, raise_steno_reset)
 };

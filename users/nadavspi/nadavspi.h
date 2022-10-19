@@ -13,8 +13,8 @@
 #define ZOOM_MUTE LGUI(LSFT(KC_M))
 #undef RESET
 #define RESET QK_BOOT
-#define RAISE MO(_RAISE)
-#define LOWER MO(_LOWER)
+#define NUM MO(_NUM)
+#define FUNC MO(_FUNC)
 #define FWD G(KC_RBRC)
 #define BACK G(KC_LBRC)
 #define TAB_L G(S(KC_LBRC))
@@ -25,8 +25,8 @@
 
 enum userspace_layers {
   _DEFAULT,
-  _RAISE,
-  _LOWER,
+  _NUM,
+  _FUNC,
   _STENO,
 };
 
@@ -38,11 +38,11 @@ enum custom_keycodes {
 
 enum tap_dance_codes {
   TD_OBSIDIAN,
-  TD_ALFRED_RAISE,
+  TD_ALFRED_NUM,
   TD_THROW_L,
   TD_THROW_R,
-  TD_LEAD_LOWER,
-  TD_RAISE_STENO
+  TD_LEAD_FUNC,
+  TD_NUM_STENO
 };
 enum {
   SINGLE_TAP = 1,

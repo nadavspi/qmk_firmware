@@ -19,29 +19,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),  
 
   [1] = LAYOUT_moonlander_wrapper(
-    RAISE_L1, _______, _______, RAISE_R1,
-    RAISE_L2, _______, _______, RAISE_R2,
-    RAISE_L3, _______, _______, RAISE_R3,
-    RAISE_L4, RAISE_R4,
+    NUM_L1, _______, _______, NUM_R1,
+    NUM_L2, _______, _______, NUM_R2,
+    NUM_L3, _______, _______, NUM_R3,
+    NUM_L4, NUM_R4,
 
-    _______, _______, RAISE_L5, 
+    _______, _______, NUM_L5, 
       _______, _______, // big thumb keys
-    RAISE_R5, _______, _______,
+    NUM_R5, _______, _______,
 
-    RAISE_L_THUMB, _______, _______, _______, _______, RAISE_R_THUMB
+    NUM_L_THUMB, _______, _______, _______, _______, NUM_R_THUMB
   ),
 
   [2] = LAYOUT_moonlander_wrapper(
-    LOWER_L1, _______, _______, LOWER_R1,
-    LOWER_L2, _______, _______, LOWER_R2,
-    LOWER_L3, _______, _______, LOWER_R3,
-    LOWER_L4, LOWER_R4,
+    FUNC_L1, _______, _______, FUNC_R1,
+    FUNC_L2, _______, _______, FUNC_R2,
+    FUNC_L3, _______, _______, FUNC_R3,
+    FUNC_L4, FUNC_R4,
 
-    _______, _______,  LOWER_L5, 
+    _______, _______,  FUNC_L5, 
       _______, _______, // big thumb keys
-     LOWER_R5, _______, _______,
+     FUNC_R5, _______, _______,
 
-     LOWER_L_THUMB, _______, _______, _______, _______, LOWER_R_THUMB 
+     FUNC_L_THUMB, _______, _______, _______, _______, FUNC_R_THUMB 
   ),
 
 };

@@ -90,10 +90,10 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                 if (index >= led_min && index <= led_max && index != NO_LED &&
                  keymap_key_to_keycode(layer, (keypos_t){col,row}) > KC_TRNS) {
                   switch (get_highest_layer(layer_state)) {
-                    case _LOWER:
+                    case _FUNC:
                       rgb_matrix_set_color(index, RGB_ORANGE);
                       break;
-                    case _RAISE:
+                    case _NUM:
                       rgb_matrix_set_color(index, RGB_PURPLE);
                       break;
                     case _STENO:
