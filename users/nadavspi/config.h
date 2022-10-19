@@ -1,7 +1,7 @@
 #pragma once
 
 #define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_TERM 185
+#define TAPPING_TERM 150
 #define RETRO_SHIFT 300
 #define PERMISSIVE_HOLD
 #define AUTO_SHIFT_TIMEOUT 160

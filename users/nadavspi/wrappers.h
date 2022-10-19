@@ -37,13 +37,13 @@
 #define DEFAULT_L3 KC_BSPACE, _________________COLEMAK_L2________________
 #define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
 #define DEFAULT_L5 _______, _______, LT(NUM, KC_SPC)
-#define DEFAULT_L_THUMB TD(TD_LEAD_FUNC)
+#define DEFAULT_L_THUMB FUNC
 
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________, KC_GRAVE
 #define DEFAULT_R2 _________________COLEMAK_R1________________, _______
 #define DEFAULT_R3 _________________COLEMAK_R2________________, _______
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
-#define DEFAULT_R_THUMB TD(TD_ALFRED_NUM)
+#define DEFAULT_R_THUMB NUM
 #define DEFAULT_R5 LT(FUNC, KC_ENT), TD(TD_OBSIDIAN), _______
 
 #define NUM_L1 _______, _______, _______, _______, _______, _______
@@ -62,7 +62,7 @@
 
 #define FUNC_L1 _______, _______, _______, _______, _______, _______
 #define FUNC_L2 KC_BRID, KC_BRIU, KC_MUTE, KC_VOLD, KC_VOLU, ZOOM_MUTE
-#define FUNC_L3 _______, _______, _______, SPACE_L, SPACE_R, _______
+#define FUNC_L3 _______, _______, SPACE_L, SPACE_R, ALFRED,  _______
 #define FUNC_L4 _______, BACK,    FWD,     TAB_L,   TAB_R,   SW_WIN
 #define FUNC_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
 #define FUNC_L_THUMB KVM
