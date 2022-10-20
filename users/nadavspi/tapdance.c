@@ -49,7 +49,7 @@ void lead_func_finished (qk_tap_dance_state_t *state, void *user_data) {
   lead_func_tap_state.state = current_dance(state);
   switch (lead_func_tap_state.state) {
     case SINGLE_TAP: 
-      qk_leader_start();
+      /* qk_leader_start(); */
       break;
     case SINGLE_HOLD: 
       layer_on(_FUNC); 

@@ -3,7 +3,7 @@
 
 #include "nadavspi.h"
 #include "tapdance.c"
-#include "leader.c"
+/* #include "leader.c" */
 #include "g/keymap_combo.h"
 
 #ifdef OLED_ENABLE
