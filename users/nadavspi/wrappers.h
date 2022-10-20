@@ -43,7 +43,7 @@
 #define DEFAULT_R3 _________________COLEMAK_R2________________, _______
 #define DEFAULT_R4 _________________COLEMAK_R3________________, KC_EQUAL
 #define DEFAULT_R_THUMB NUM
-#define DEFAULT_R5 KC_ENT, TD(TD_OBSIDIAN), _______
+#define DEFAULT_R5 OSM(MOD_LSFT), TD(TD_OBSIDIAN), _______
 
 #ifdef NUMPAD
 #define NUM_L1 _______, _______, _______, _______, _______, _______
