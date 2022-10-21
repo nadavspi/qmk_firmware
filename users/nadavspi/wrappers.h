@@ -60,14 +60,15 @@
 #define NUM_R5 KC_0, _______, _______
 #else
 #define NUM_L1 _______, _______, _______, _______, _______, _______
-#define NUM_L2 _______, _______, _______, _______, _______, KC_PIPE  
+#define NUM_L2 _______, _______, _______, _______, _______, _______
 #define NUM_L3 _______, ________________NUMBER_LEFT________________  
 #define NUM_L4 _______, _______, _______, _______, _______, _______
 #define NUM_L5 _______, _______, _______
 #define NUM_L_THUMB _______
 
+
 #define NUM_R1 _______, _______, _______, _______, _______, _______
-#define NUM_R2 _______, _______, _______, _______, _______, _______ 
+#define NUM_R2 _______, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV,  _______ 
 #define NUM_R3 ________________NUMBER_RIGHT_______________, KC_GRAVE
 #define NUM_R4 _______, _______, _______, _______, _______, _______ 
 #define NUM_R_THUMB  _______
@@ -75,15 +76,15 @@
 #endif
 
 #define SYM_L1 _______, _______, _______, _______, _______, _______
-#define SYM_L2 _______, _______, _______, _______, _______, _______  
+#define SYM_L2 _______, _______, _______, KC_BSLS, KC_PIPE, _______
 #define SYM_L3 XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
 #define SYM_L4 _______, _______, _______, _______, _______, _______
 #define SYM_L5 _______, _______, _______
 #define SYM_L_THUMB _______
 
 #define SYM_R1 _______, _______, _______, _______, _______, _______
-#define SYM_R2 _______, _______, _______, _______, _______, _______ 
-#define SYM_R3 KC_CIRC, KC_AMPR, KC_ASTR, XXXXXXX, XXXXXXX, XXXXXXX
+#define SYM_R2 NUM_R2
+#define SYM_R3 KC_CIRC, KC_AMPR, KC_ASTR, KC_SLSH, XXXXXXX, XXXXXXX
 #define SYM_R4 _______, _______, _______, _______, _______, _______ 
 #define SYM_R_THUMB  _______
 #define SYM_R5 _______, _______, _______
