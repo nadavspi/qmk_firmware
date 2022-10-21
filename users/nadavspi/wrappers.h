@@ -31,11 +31,12 @@
 
 // Layers
 #define DEFAULT_L1 _______,   ___________________BLANK___________________
-#define DEFAULT_L2 KC_TAB,    _________________COLEMAK_L1________________
-#define DEFAULT_L3 KC_BSPACE, _________________COLEMAK_L2________________
+#define DEFAULT_L2 _______,   _________________COLEMAK_L1________________
+#define DEFAULT_L3 _______,   _________________COLEMAK_L2________________
 #define DEFAULT_L4 CAPSWRD,   _________________COLEMAK_L3________________
 #define DEFAULT_L5 _______, _______, KC_SPC
 #define DEFAULT_L_THUMB FUNC
+
 
 #define DEFAULT_R1 ___________________BLANK___________________, KC_GRAVE
 #define DEFAULT_R2 _________________COLEMAK_R1________________, _______
