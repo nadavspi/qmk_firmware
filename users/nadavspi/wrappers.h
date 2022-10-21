@@ -1,25 +1,24 @@
 #pragma once
 #include "nadavspi.h"
 
+#define HOME_A MT(MOD_LCTL, KC_A)
+#define HOME_R MT(MOD_LALT, KC_R)
+#define HOME_S MT(MOD_LGUI, KC_S)
+#define HOME_T MT(MOD_LSFT, KC_T)
+#define HOME_N MT(MOD_RSFT, KC_N)
+#define HOME_E MT(MOD_RGUI, KC_E)
+#define HOME_I MT(MOD_RALT, KC_I)
+#define HOME_O MT(MOD_RCTL, KC_O)
+
 // Base
-#define _________________QWERTY_L1_________________       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
-#define _________________QWERTY_L2_DEFAULT_________       KC_A,    KC_S,    KC_D,    KC_F,    KC_G
-#define _________________QWERTY_L2_________________       MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MT(MOD_LGUI, KC_D),MT(MOD_LSFT, KC_F),KC_G
-#define _________________QWERTY_L3_________________       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
-
-#define _________________QWERTY_R1_________________       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
-#define _________________QWERTY_R2_DEFAULT_________       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
-#define _________________QWERTY_R2_________________       KC_H,    MT(MOD_RSFT, KC_J),MT(MOD_RGUI, KC_K),MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCOLON)
-#define _________________QWERTY_R3_________________       KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
-
 #define _________________COLEMAK_L1________________ KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
 #define _________________COLEMAK_L2_DEFAULT________ KC_A,    KC_R,    KC_S,    KC_T,    KC_D
-#define _________________COLEMAK_L2________________ MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LGUI, KC_S),MT(MOD_LSFT, KC_T),KC_D
+#define _________________COLEMAK_L2________________ HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_D
 #define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
 #define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN
 #define _________________COLEMAK_R2_DEFAULT________ KC_H,    KC_N,    KC_E,    KC_I,    KC_O
-#define _________________COLEMAK_R2________________ KC_H,    MT(MOD_RSFT, KC_N),MT(MOD_RGUI, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RCTL, KC_O)
+#define _________________COLEMAK_R2________________ KC_H,    HOME_N,  HOME_E,  HOME_I,  HOME_O
 #define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
 
