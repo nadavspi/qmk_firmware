@@ -67,14 +67,20 @@ bool caps_word_press_user(uint16_t keycode) {
 }
 
 void keyboard_post_init_user(void) {
+    #ifndef RGB_ENABLE
+    rgb_matrix_disable();
+    #endif
+    #ifdef RGB_ENABLE
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
     rgb_matrix_sethsv_noeeprom(HSV_OFF);
+    #endif
     #ifdef CONSOLE_ENABLE
     debug_enable=true;
     debug_matrix=true;
     #endif 
 }
 
+#ifdef RGB_ENABLE
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
    if (get_highest_layer(layer_state) > 0) {
         uint8_t layer = get_highest_layer(layer_state);
@@ -106,6 +112,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         }
     }
 }
+#endif
 
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
