@@ -30,79 +30,62 @@
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
 // Layers
-#define DEFAULT_L1 _______,   ___________________BLANK___________________
-#define DEFAULT_L2 _______,   _________________COLEMAK_L1________________
-#define DEFAULT_L3 _______,   _________________COLEMAK_L2________________
-#define DEFAULT_L4 _______,   _________________COLEMAK_L3________________
+#define DEFAULT_L1 ___________________BLANK___________________
+#define DEFAULT_L2 _________________COLEMAK_L1________________
+#define DEFAULT_L3 _________________COLEMAK_L2________________
+#define DEFAULT_L4 _________________COLEMAK_L3________________
 #define DEFAULT_L5 _______, _______, KC_SPC
 #define DEFAULT_L_THUMB FUNC
 
 
-#define DEFAULT_R1 ___________________BLANK___________________, _______
-#define DEFAULT_R2 _________________COLEMAK_R1________________, _______
-#define DEFAULT_R3 _________________COLEMAK_R2________________, _______
-#define DEFAULT_R4 _________________COLEMAK_R3________________, _______
+#define DEFAULT_R1 ___________________BLANK___________________
+#define DEFAULT_R2 _________________COLEMAK_R1________________
+#define DEFAULT_R3 _________________COLEMAK_R2________________
+#define DEFAULT_R4 _________________COLEMAK_R3________________
 #define DEFAULT_R_THUMB NUM
 #define DEFAULT_R5 OSM(MOD_LSFT), TD(TD_OBSIDIAN), _______
 
-#ifdef NUMPAD
-#define NUM_L1 _______, _______, _______, _______, _______, _______
-#define NUM_L2 _______, _______, _______, _______, _______, KC_PIPE  
-#define NUM_L3 _______, G(KC_1), G(KC_2), G(KC_3), G(KC_4), G(KC_5)   
-#define NUM_L4 _______, _______, _______, _______, _______, _______
+#define NUM_L1 _______, _______, _______, _______, _______
+#define NUM_L2 _______, _______, _______, _______, _______
+#define NUM_L3 ________________NUMBER_LEFT________________  
+#define NUM_L4 ________________NUMBER_RIGHT_______________
 #define NUM_L5 _______, _______, _______
 #define NUM_L_THUMB _______
 
-#define NUM_R1 _______,   _______, _______, _______, KC_KP_SLASH,    _______ 
-#define NUM_R2 _______,   KC_7,    KC_8,    KC_9,    KC_KP_ASTERISK, _______ 
-#define NUM_R3 _______,   KC_4,    KC_5,    KC_6,    KC_KP_MINUS,    _______ 
-#define NUM_R4 KC_BSPACE, KC_1,    KC_2,    KC_3,    KC_KP_PLUS,     _______ 
-#define NUM_R_THUMB  KC_ENT
-#define NUM_R5 KC_0, _______, _______
-#else
-#define NUM_L1 _______, _______, _______, _______, _______, _______
-#define NUM_L2 _______, _______, _______, _______, _______, _______
-#define NUM_L3 _______, ________________NUMBER_LEFT________________  
-#define NUM_L4 _______, ________________NUMBER_RIGHT_______________
-#define NUM_L5 _______, _______, _______
-#define NUM_L_THUMB _______
-
-
-#define NUM_R1 _______, _______, _______, _______, _______, _______
-#define NUM_R2 _______, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV,  _______ 
-#define NUM_R3 ________________NUMBER_RIGHT_______________, KC_GRAVE
-#define NUM_R4 _______, _______, _______, _______, _______, _______ 
+#define NUM_R1 _______, _______, _______, _______, _______
+#define NUM_R2 _______, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV
+#define NUM_R3 ________________NUMBER_RIGHT_______________
+#define NUM_R4 _______, _______, _______, _______, _______
 #define NUM_R_THUMB  _______
 #define NUM_R5 _______, _______, _______
-#endif
 
-#define SYM_L1 _______, _______, _______, _______, _______, _______
-#define SYM_L2 _______, _______, _______, KC_BSLS, KC_PIPE, _______
-#define SYM_L3 XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
-#define SYM_L4 _______, _______, _______, _______, _______, _______
+#define SYM_L1 _______, _______, _______, _______, _______
+#define SYM_L2 KVM,     _______, KC_BSLS, KC_PIPE, _______
+#define SYM_L3 KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
+#define SYM_L4 _______, _______, _______, _______, _______
 #define SYM_L5 _______, _______, _______
 #define SYM_L_THUMB _______
 
-#define SYM_R1 _______, _______, _______, _______, _______, _______
+#define SYM_R1 _______, _______, _______, _______, _______
 #define SYM_R2 NUM_R2
-#define SYM_R3 KC_CIRC, KC_AMPR, KC_ASTR, KC_SLSH, XXXXXXX, XXXXXXX
-#define SYM_R4 _______, _______, _______, _______, _______, _______ 
+#define SYM_R3 KC_CIRC, KC_AMPR, KC_ASTR, KC_SLSH, XXXXXXX
+#define SYM_R4 _______, _______, _______, _______, _______
 #define SYM_R_THUMB  _______
 #define SYM_R5 _______, _______, _______
 
-#define FUNC_L1 _______, _______, _______, _______, _______, _______
-#define FUNC_L2 KC_BRID, KC_BRIU, KC_MUTE, KC_VOLD, KC_VOLU, ZOOM_MUTE
-#define FUNC_L3 KVM,     _______, _______, SPACE_L, SPACE_R, ALFRED
-#define FUNC_L4 _______, BACK,    FWD,     TAB_L,   TAB_R,   CTXS
+#define FUNC_L1 _______,   _______, _______, _______, _______
+#define FUNC_L2 KC_BRID,   KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE
+#define FUNC_L3 ZOOM_MUTE, _______, SPACE_L, SPACE_R, ALFRED
+#define FUNC_L4 BACK,      FWD,     TAB_L,  TAB_R,   CTXS
 #define FUNC_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
 #define FUNC_L_THUMB _______
 
-#define FUNC_R1 _______, _______, _______, _______, KC_MAKE, RESET
-#define FUNC_R2 _______, _______, _______, _______, _______, _______
-#define FUNC_R3 KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, _______, _______
-#define FUNC_R4 _______, _______, _______, _______, _______, _______
+#define FUNC_R1 _______, _______, _______, _______, _______
+#define FUNC_R2 _______, _______, _______, KC_MAKE, RESET
+#define FUNC_R3 KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, _______
+#define FUNC_R4 _______, _______, _______, _______, _______
 #define FUNC_R_THUMB _______
-#define FUNC_R5 KC_BTN2, _______, _______
+#define FUNC_R5 _______, _______, _______
    
 
 #define STENO_L1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX 
