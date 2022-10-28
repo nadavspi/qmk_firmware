@@ -8,6 +8,11 @@
 
 #include "wrappers.h"
 
+#define KC_BSPACE KC_BACKSPACE
+#define KC_LBRACKET KC_LEFT_BRACKET
+#define KC_RBRACKET KC_RIGHT_BRACKET
+#define KC_SCOLON KC_SCLN
+
 #define ALFRED LCTL(KC_SPACE)
 #define CLIPBOARD LALT(LGUI(KC_C))
 #define ZOOM_MUTE LGUI(LSFT(KC_M))
