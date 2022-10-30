@@ -16,10 +16,10 @@
 #define _________________COLEMAK_L2________________ HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_D
 #define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
-#define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN
+#define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOTE
 #define _________________COLEMAK_R2_DEFAULT________ KC_H,    KC_N,    KC_E,    KC_I,    KC_O
 #define _________________COLEMAK_R2________________ KC_H,    HOME_N,  HOME_E,  HOME_I,  HOME_O
-#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
+#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, TD_DOT,  KC_SLSH
 
 
 #define ________________NUMBER_LEFT________________       KC_1,    KC_2,    KC_3,    KC_4,    KC_5
@@ -34,7 +34,7 @@
 #define DEFAULT_L2 _________________COLEMAK_L1________________
 #define DEFAULT_L3 _________________COLEMAK_L2________________
 #define DEFAULT_L4 _________________COLEMAK_L3________________
-#define DEFAULT_L5 _______, _______, KC_SPC
+#define DEFAULT_L5 _______, _______, _______
 #define DEFAULT_L_THUMB FUNC
 
 

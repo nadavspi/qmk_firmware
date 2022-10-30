@@ -28,6 +28,8 @@
 #define SPACE_R C(KC_RGHT)
 #define KVM G(KC_F15)
 #define CTXS S(G(KC_TAB))
+#define TD_DOT TD(DOT_TD)
+#define SHIFT_NUM TD(TD_SHIFT_NUM)
 
 enum userspace_layers {
   _DEFAULT,
@@ -44,11 +46,12 @@ enum custom_keycodes {
 
 enum tap_dance_codes {
   TD_OBSIDIAN,
-  TD_ALFRED_NUM,
+  TD_SHIFT_NUM,
   TD_THROW_L,
   TD_THROW_R,
   TD_LEAD_FUNC,
-  TD_NUM_STENO
+  TD_NUM_STENO,
+  DOT_TD,
 };
 enum {
   SINGLE_TAP = 1,

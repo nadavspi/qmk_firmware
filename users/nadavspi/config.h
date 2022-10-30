@@ -24,7 +24,7 @@
 #define MOUSEKEY_MAX_SPEED 7
 #define MOUSEKEY_WHEEL_DELAY 0
 
-#define COMBO_TERM 30
+#define COMBO_TERM 25
 #define COMBO_MUST_TAP_PER_COMBO true
 
 #ifdef OLED_ENABLE

@@ -8,8 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DEFAULT_L2, DEFAULT_R2,
     DEFAULT_L3, DEFAULT_R3,
     DEFAULT_L4, DEFAULT_R4,
-          _______, KC_SPC, DEFAULT_L_THUMB, DEFAULT_R_THUMB, OSM(MOD_LSFT), TD(TD_OBSIDIAN)
-
+          _______, _______, LT(_FUNC, KC_SPC), SHIFT_NUM, KC_RSFT, TD(TD_OBSIDIAN)
   ),
 
   [_NUM] = LAYOUT_wrapper(
