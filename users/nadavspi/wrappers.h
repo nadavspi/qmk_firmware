@@ -35,14 +35,14 @@
 #define DEFAULT_L3 _________________COLEMAK_L2________________
 #define DEFAULT_L4 _________________COLEMAK_L3________________
 #define DEFAULT_L5 _______, _______, _______
-#define DEFAULT_L_THUMB FUNC
+#define DEFAULT_L_THUMB LT(_FUNC, KC_SPC)
 
 
 #define DEFAULT_R1 ___________________BLANK___________________
 #define DEFAULT_R2 _________________COLEMAK_R1________________
 #define DEFAULT_R3 _________________COLEMAK_R2________________
 #define DEFAULT_R4 _________________COLEMAK_R3________________
-#define DEFAULT_R_THUMB NUM
+#define DEFAULT_R_THUMB SHIFT_NUM
 #define DEFAULT_R5 OSM(MOD_LSFT), TD(TD_OBSIDIAN), _______
 
 #define NUM_L1 _______, _______, _______, _______, _______

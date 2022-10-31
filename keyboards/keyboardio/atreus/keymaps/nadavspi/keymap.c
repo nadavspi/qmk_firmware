@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DEFAULT_L2,                    DEFAULT_R2,
     DEFAULT_L3,                    DEFAULT_R3,
     DEFAULT_L4, ZOOM_MUTE,  _______, DEFAULT_R4,
-           _______, _______, DEFAULT_L5, DEFAULT_L_THUMB, DEFAULT_R_THUMB, DEFAULT_R5, _______, _______ 
+           _______, DEFAULT_L5, DEFAULT_L_THUMB, _______, _______, DEFAULT_R_THUMB, DEFAULT_R5, _______
   ),
 
   [_NUM] = LAYOUT_wrapper(
