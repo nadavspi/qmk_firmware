@@ -30,20 +30,20 @@
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
 // Layers
-#define DEFAULT_L1 ___________________BLANK___________________
+#define DEFAULT_L1 ________________NUMBER_LEFT________________      
 #define DEFAULT_L2 _________________COLEMAK_L1________________
 #define DEFAULT_L3 _________________COLEMAK_L2________________
 #define DEFAULT_L4 _________________COLEMAK_L3________________
-#define DEFAULT_L5 _______, _______, _______
+#define DEFAULT_L5 _______, KC_BTN1, DEFAULT_L_THUMB
 #define DEFAULT_L_THUMB LT(_FUNC, KC_SPC)
 
 
-#define DEFAULT_R1 ___________________BLANK___________________
+#define DEFAULT_R1 ________________NUMBER_RIGHT_______________      
 #define DEFAULT_R2 _________________COLEMAK_R1________________
 #define DEFAULT_R3 _________________COLEMAK_R2________________
 #define DEFAULT_R4 _________________COLEMAK_R3________________
 #define DEFAULT_R_THUMB SHIFT_NUM
-#define DEFAULT_R5 OSM(MOD_LSFT), TD(TD_OBSIDIAN), _______
+#define DEFAULT_R5 DEFAULT_R_THUMB, TD(TD_OBSIDIAN), _______
 
 #define NUM_L1 _______, _______, _______, _______, _______
 #define NUM_L2 _______, _______, _______, _______, _______

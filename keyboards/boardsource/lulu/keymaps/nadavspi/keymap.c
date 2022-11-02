@@ -6,7 +6,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DEFAULT] = LAYOUT_wrapper(
     _______, DEFAULT_L1,                    DEFAULT_R1, _______,
-    _______, DEFAULT_L2,                    DEFAULT_R2, _______,
+    KC_TAB,  DEFAULT_L2,                    DEFAULT_R2, KC_SCLN,
     _______, DEFAULT_L3,                    DEFAULT_R3, _______,
     _______, DEFAULT_L4, ZOOM_MUTE,  _______, DEFAULT_R4, _______,
               DEFAULT_L5, DEFAULT_L_THUMB, DEFAULT_R_THUMB, DEFAULT_R5        

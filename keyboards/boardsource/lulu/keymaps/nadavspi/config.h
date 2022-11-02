@@ -1,1 +1,2 @@
 #define SPLIT_LAYER_STATE_ENABLE
+#define RGB_DISABLE

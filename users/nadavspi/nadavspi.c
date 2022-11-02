@@ -69,8 +69,8 @@ bool caps_word_press_user(uint16_t keycode) {
 }
 
 void keyboard_post_init_user(void) {
-    #ifndef RGB_ENABLE
-    /* rgb_matrix_disable(); */
+    #ifdef RGB_DISABLE
+    rgb_matrix_disable();
     #endif
     #ifdef RGB_ENABLE
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
