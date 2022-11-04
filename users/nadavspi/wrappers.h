@@ -53,14 +53,14 @@
 #define NUM_L_THUMB _______
 
 #define NUM_R1 _______, _______, _______, _______, _______
-#define NUM_R2 _______, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV
+#define NUM_R2 KC_PIPE, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV
 #define NUM_R3 ________________NUMBER_RIGHT_______________
 #define NUM_R4 _______, _______, _______, _______, _______
 #define NUM_R_THUMB  _______
 #define NUM_R5 _______, _______, _______
 
 #define SYM_L1 _______, _______, _______, _______, _______
-#define SYM_L2 KVM,     _______, KC_BSLS, KC_PIPE, _______
+#define SYM_L2 KVM,     _______, KC_LBRC, KC_RBRC, KC_BSLS
 #define SYM_L3 KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
 #define SYM_L4 _______, _______, _______, _______, _______
 #define SYM_L5 _______, _______, _______
