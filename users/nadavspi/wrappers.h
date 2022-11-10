@@ -5,7 +5,7 @@
 #define HOME_R MT(MOD_LALT, KC_R)
 #define HOME_S MT(MOD_LGUI, KC_S)
 #define HOME_T MT(MOD_LSFT, KC_T)
-#define HOME_N MT(MOD_RSFT, KC_N)
+#define HOME_N MT(MOD_LSFT, KC_N)
 #define HOME_E MT(MOD_RGUI, KC_E)
 #define HOME_I MT(MOD_RALT, KC_I)
 #define HOME_O MT(MOD_RCTL, KC_O)
@@ -37,7 +37,6 @@
 #define DEFAULT_L5 _______, KC_BTN1, DEFAULT_L_THUMB
 #define DEFAULT_L_THUMB LT(_FUNC, KC_SPC)
 
-
 #define DEFAULT_R1 ________________NUMBER_RIGHT_______________      
 #define DEFAULT_R2 _________________COLEMAK_R1________________
 #define DEFAULT_R3 _________________COLEMAK_R2________________
@@ -46,7 +45,7 @@
 #define DEFAULT_R5 DEFAULT_R_THUMB, TD(TD_OBSIDIAN), _______
 
 #define NUM_L1 _______, _______, _______, _______, _______
-#define NUM_L2 _______, _______, _______, _______, _______
+#define NUM_L2 _______, _______, KC_LBRC, KC_RBRC, KC_BSLS
 #define NUM_L3 ________________NUMBER_LEFT________________  
 #define NUM_L4 ________________NUMBER_RIGHT_______________
 #define NUM_L5 _______, _______, _______
@@ -55,7 +54,7 @@
 #define NUM_R1 _______, _______, _______, _______, _______
 #define NUM_R2 KC_PIPE, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV
 #define NUM_R3 ________________NUMBER_RIGHT_______________
-#define NUM_R4 _______, _______, _______, _______, _______
+#define NUM_R4 _______, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL)
 #define NUM_R_THUMB  _______
 #define NUM_R5 _______, _______, _______
 
@@ -75,8 +74,8 @@
 
 #define FUNC_L1 _______,   _______, _______, _______, _______
 #define FUNC_L2 KC_BRID,   KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE
-#define FUNC_L3 ZOOM_MUTE, _______, SPACE_L, SPACE_R, ALFRED
-#define FUNC_L4 BACK,      FWD,     TAB_L,  TAB_R,   CTXS
+#define FUNC_L3 ZOOM_MUTE, SPACE_L, SPACE_R, ALFRED,  _______
+#define FUNC_L4 OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), CTXS
 #define FUNC_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
 #define FUNC_L_THUMB _______
 
