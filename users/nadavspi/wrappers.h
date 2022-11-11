@@ -74,8 +74,8 @@
 
 #define FUNC_L1 _______,   _______, _______, _______, _______
 #define FUNC_L2 KC_BRID,   KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE
-#define FUNC_L3 ZOOM_MUTE, SPACE_L, SPACE_R, ALFRED,  _______
-#define FUNC_L4 OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), CTXS
+#define FUNC_L3 ZOOM_MUTE, _______, SPACE_L, SPACE_R, ALFRED
+#define FUNC_L4 BACK,      FWD,     TAB_L,   TAB_R,   CTXS
 #define FUNC_L5 TD(TD_THROW_L), TD(TD_THROW_R), _______
 #define FUNC_L_THUMB _______
 
