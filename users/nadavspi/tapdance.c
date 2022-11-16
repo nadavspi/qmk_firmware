@@ -96,47 +96,6 @@ void raise_steno_reset (qk_tap_dance_state_t *state, void *user_data) {
   raise_steno_tap_state.state = 0;
 }
 
-// thanks to https://github.com/precondition/dactyl-manuform-keymap/blob/97ea8bdab10e2716098b0902a7ab7f621ec50d74/tapdance.c
-static void sentence_end(qk_tap_dance_state_t *state, void *user_data) {
-    switch (state->count) {
-
-        // Double tapping TD_DOT produces
-        // ". <one-shot-shift>" i.e. dot, space and capitalize next letter.
-        // This helps to quickly end a sentence and begin another one
-        // without having to hit shift.
-        case 2:
-            /* Check that Shift is inactive */
-            if (!(get_mods() & MOD_MASK_SHIFT)) {
-                tap_code(KC_SPC);
-                /* Internal code of OSM(MOD_LSFT) */
-                add_oneshot_mods(MOD_BIT(KC_LSFT));
-
-            } else {
-                // send ">" (KC_DOT + shift → ">")
-                tap_code(KC_DOT);
-            }
-            break;
-
-        // Since `sentence_end` is called on each tap
-        // and not at the end of the tapping term,
-        // the third tap needs to cancel the effects
-        // of the double tap in order to get the expected
-        // three dots ellipsis.
-        case 3:
-            // remove the added space of the double tap case
-            tap_code(KC_BSPC);
-            // replace the space with a second dot
-            tap_code(KC_DOT);
-            // tap the third dot
-            tap_code(KC_DOT);
-            break;
-
-        // send KC_DOT on every normal tap of TD_DOT
-        default:
-            tap_code(KC_DOT);
-    }
-};
-
 // Tap dance
 qk_tap_dance_action_t tap_dance_actions[] = {
   // Activate Obsidian on tap, open daily note on double tap
@@ -146,5 +105,4 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_THROW_R] = ACTION_TAP_DANCE_DOUBLE(LGUI(LCTL(KC_I)), LALT(LGUI(KC_I))),
   // [TD_LEAD_FUNC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, lead_func_finished, lead_func_reset),
   // [TD_NUM_STENO] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, raise_steno_finished, raise_steno_reset)
-  [DOT_TD] = ACTION_TAP_DANCE_FN_ADVANCED(sentence_end, NULL, NULL),
 };
