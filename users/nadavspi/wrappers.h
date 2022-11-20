@@ -9,17 +9,18 @@
 #define HOME_E MT(MOD_RGUI, KC_E)
 #define HOME_I MT(MOD_RALT, KC_I)
 #define HOME_O MT(MOD_RCTL, KC_O)
+#define LT_V LT(_NUM, KC_V)
 
 // Base
 #define _________________COLEMAK_L1________________ KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
 #define _________________COLEMAK_L2_DEFAULT________ KC_A,    KC_R,    KC_S,    KC_T,    KC_D
 #define _________________COLEMAK_L2________________ HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_D
-#define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
+#define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    LT_V,    KC_B
 
 #define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOTE
 #define _________________COLEMAK_R2_DEFAULT________ KC_H,    KC_N,    KC_E,    KC_I,    KC_O
 #define _________________COLEMAK_R2________________ KC_H,    HOME_N,  HOME_E,  HOME_I,  HOME_O
-#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, TD_DOT,  KC_SLSH
+#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
 
 
 #define ________________NUMBER_LEFT________________       KC_1,    KC_2,    KC_3,    KC_4,    KC_5
@@ -30,14 +31,14 @@
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
 // Layers
-#define DEFAULT_L1 ________________NUMBER_LEFT________________      
+#define DEFAULT_L1 ________________NUMBER_LEFT________________
 #define DEFAULT_L2 _________________COLEMAK_L1________________
 #define DEFAULT_L3 _________________COLEMAK_L2________________
 #define DEFAULT_L4 _________________COLEMAK_L3________________
 #define DEFAULT_L5 _______, KC_BTN1, DEFAULT_L_THUMB
 #define DEFAULT_L_THUMB LT(_FUNC, KC_SPC)
 
-#define DEFAULT_R1 ________________NUMBER_RIGHT_______________      
+#define DEFAULT_R1 ________________NUMBER_RIGHT_______________
 #define DEFAULT_R2 _________________COLEMAK_R1________________
 #define DEFAULT_R3 _________________COLEMAK_R2________________
 #define DEFAULT_R4 _________________COLEMAK_R3________________
@@ -46,7 +47,7 @@
 
 #define NUM_L1 _______, _______, _______, _______, _______
 #define NUM_L2 _______, _______, KC_LBRC, KC_RBRC, KC_BSLS
-#define NUM_L3 ________________NUMBER_LEFT________________  
+#define NUM_L3 ________________NUMBER_LEFT________________
 #define NUM_L4 ________________NUMBER_RIGHT_______________
 #define NUM_L5 _______, _______, _______
 #define NUM_L_THUMB _______
@@ -85,14 +86,14 @@
 #define FUNC_R4 _______, _______, _______, _______, _______
 #define FUNC_R_THUMB _______
 #define FUNC_R5 _______, _______, _______
-   
 
-#define STENO_L1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX 
+
+#define STENO_L1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define STENO_L2 XXXXXXX, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5
 #define STENO_L3 XXXXXXX, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1
 #define STENO_L4 XXXXXXX, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2
 
-#define STENO_R1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX 
+#define STENO_R1 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define STENO_R2 STN_N6,  STN_N7, STN_N8, STN_N9, STN_NA, STN_NB
 #define STENO_R3 STN_ST3, STN_FR, STN_PR, STN_LR, STN_TR, STN_DR
-#define STENO_R4 STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR 
+#define STENO_R4 STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR
