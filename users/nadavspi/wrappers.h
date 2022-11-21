@@ -53,7 +53,7 @@
 #define NUM_L_THUMB _______
 
 #define NUM_R1 _______, _______, _______, _______, _______
-#define NUM_R2 KC_PIPE, KC_EQL,  KC_PLUS, KC_MINS, KC_GRV
+#define NUM_R2 KC_PIPE, KC_EQL,  KC_MINS, KC_PLUS, KC_GRV
 #define NUM_R3 ________________NUMBER_RIGHT_______________
 #define NUM_R4 _______, OSM(MOD_LSFT), OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL)
 #define NUM_R_THUMB  _______
