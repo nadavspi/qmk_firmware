@@ -9,18 +9,16 @@
 #define HOME_E MT(MOD_RGUI, KC_E)
 #define HOME_I MT(MOD_RALT, KC_I)
 #define HOME_O MT(MOD_RCTL, KC_O)
-#define LT_V LT(_NUM, KC_V)
+#define LT_D LT(_NUM, KC_D)
 
 // Base
-#define _________________COLEMAK_L1________________ KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
-#define _________________COLEMAK_L2_DEFAULT________ KC_A,    KC_R,    KC_S,    KC_T,    KC_D
-#define _________________COLEMAK_L2________________ HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_D
-#define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    LT_V,    KC_B
+#define _________________COLEMAK_L1________________ KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
+#define _________________COLEMAK_L2________________ HOME_A,  HOME_R,  HOME_S,  HOME_T,  KC_G
+#define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    LT_D,    KC_V
 
 #define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOTE
-#define _________________COLEMAK_R2_DEFAULT________ KC_H,    KC_N,    KC_E,    KC_I,    KC_O
-#define _________________COLEMAK_R2________________ KC_H,    HOME_N,  HOME_E,  HOME_I,  HOME_O
-#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
+#define _________________COLEMAK_R2________________ KC_M,    HOME_N,  HOME_E,  HOME_I,  HOME_O
+#define _________________COLEMAK_R3________________ KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH
 
 
 #define ________________NUMBER_LEFT________________       KC_1,    KC_2,    KC_3,    KC_4,    KC_5
