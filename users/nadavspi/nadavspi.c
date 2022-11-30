@@ -24,16 +24,15 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   #ifdef CONSOLE_ENABLE
     uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, index: %2u\n", keycode, record->event.key.col, record->event.key.row, g_led_config.matrix_co[record->event.key.row][record->event.key.col]);
-  #endif 
+  #endif
 
   switch (keycode) {
     case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
             if (!record->event.pressed) {
             uint8_t temp_mod = get_mods();
             clear_mods(); clear_oneshot_mods();
-            SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP);
+            SEND_STRING("sudo util/docker_build.sh " QMK_KEYBOARD ":" QMK_KEYMAP);
             SEND_STRING(":flash");
-            SEND_STRING(" -j8");
             set_mods(temp_mod);
         }
         break;
@@ -44,9 +43,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Caps word
 bool caps_word_press_user(uint16_t keycode) {
-    if (IS_MT(keycode)) { 
+    if (IS_MT(keycode)) {
       add_weak_mods(MOD_BIT(KC_LSFT));
-      return true; 
+      return true;
     }
 
     switch (keycode) {
@@ -79,7 +78,7 @@ void keyboard_post_init_user(void) {
     #ifdef CONSOLE_ENABLE
     debug_enable=true;
     debug_matrix=true;
-    #endif 
+    #endif
 }
 
 #ifdef RGB_ENABLE
