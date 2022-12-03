@@ -1,14 +1,14 @@
 #pragma once
 #include "nadavspi.h"
 
-#define HOME_A MT(MOD_LCTL, KC_A)
+#define HOME_A MT(MOD_LSFT, KC_A)
 #define HOME_R MT(MOD_LALT, KC_R)
 #define HOME_S MT(MOD_LGUI, KC_S)
-#define HOME_T MT(MOD_LSFT, KC_T)
-#define HOME_N MT(MOD_LSFT, KC_N)
+#define HOME_T MT(MOD_LCTL, KC_T)
+#define HOME_N MT(MOD_LCTL, KC_N)
 #define HOME_E MT(MOD_RGUI, KC_E)
 #define HOME_I MT(MOD_RALT, KC_I)
-#define HOME_O MT(MOD_RCTL, KC_O)
+#define HOME_O MT(MOD_LSFT, KC_O)
 #define LT_D LT(_NUM, KC_D)
 
 // Base
