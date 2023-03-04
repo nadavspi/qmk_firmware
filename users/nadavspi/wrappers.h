@@ -58,7 +58,7 @@
 #define NUM_R5 _______, _______, _______
 
 #define SYM_L1 _______, _______, _______, _______, _______
-#define SYM_L2 KVM,     _______, KC_LBRC, KC_RBRC, KC_BSLS
+#define SYM_L2 KC_SCRL, _______, KC_LBRC, KC_RBRC, KC_BSLS
 #define SYM_L3 KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
 #define SYM_L4 _______, _______, _______, _______, _______
 #define SYM_L5 _______, _______, _______
